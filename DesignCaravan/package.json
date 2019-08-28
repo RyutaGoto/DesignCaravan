@@ -1,0 +1,23 @@
+{
+  "name": "DesignCaravan",
+  "version": "1.0.0",
+  "description": "My flawless Nuxt.js project",
+  "author": "RyutaGoto",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.2.0"
+  }
+}
