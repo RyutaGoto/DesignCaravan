@@ -33,4 +33,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+  .column
+    .card
+      .card-content
+        .content
+          img
+    .card-footer
+      .card-footer-item
+        h1
+        h2
+        span
 </style>
