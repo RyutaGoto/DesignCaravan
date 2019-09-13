@@ -3,7 +3,8 @@
     div.card
       div.card-content
         div.content
-          img(:src="imgSrc", alt="")
+          img(:src="imgSrc", alt="", @click="openModal(obj)")
+    Modal(:val="postItem", v-if="showModal", @close="closeModal")
     footer
       div
         h1.has-text-grey {{ title }}
@@ -12,20 +13,37 @@
 </template>
 
 <script>
+import Modal from '~/components/Modal.vue'
+
 export default {
+  components: {
+    Modal,
+  },
+  data: function(){
+    return{
+      showModal: false,
+      postItem: '',
+    }
+  },
+  methods: {
+    openModal(item) {
+      this.postItem = item;
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
+    }
+  },
   props: {
     title: {
-      type: String,
-      required: true
-    },
-    icon: {
       type: String,
       required: true
     },
     imgSrc: {
       type: String,
       required: true
-    }
+    },
+    obj: Object
   }
 }
 </script>

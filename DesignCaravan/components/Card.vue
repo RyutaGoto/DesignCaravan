@@ -1,14 +1,15 @@
 <template lang="pug">
   div.column
     div.box
-      div.card-content
-        div.content
-          img(:src="imgSrc" alt="")
-      footer.card-footer
-        div.card-footer-item
-          h1 {{ title }}
-          span
-            slot
+      nuxt-link(:to="link")
+        div.card-content
+          div.content
+            img(:src="imgSrc" alt="")
+        footer.card-footer
+          div.card-footer-item
+            h1 {{ title }}
+            span
+              slot
 
 </template>
 
@@ -19,13 +20,13 @@ export default {
       type: String,
       required: true
     },
-    icon: {
-      type: String,
-      required: true
-    },
     imgSrc: {
       type: String,
       required: true
+    },
+    link: {
+      type: String,
+      required: true,
     }
   },
 }
@@ -33,7 +34,7 @@ export default {
 <style lang="sass" scoped>
   .column
     .box
-      //box-shadow: none;
+      box-shadow: none;
       padding: 0em;
       position: relative;
       .card-content
@@ -49,6 +50,7 @@ export default {
           border-radius: 10px;
           box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
       .card-footer
+        width: 310px;
         position: absolute;
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.7);

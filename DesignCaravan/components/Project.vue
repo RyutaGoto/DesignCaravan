@@ -3,10 +3,10 @@
     div.card
       div.card-content
         div.content
-          img(src="", alt="")
+          img(:src="imgSrc", alt="")
     footer.card-footer
       div.card-footer-item
-        h1.has-text-grey {{ title }}
+        h1 {{ title }}
         h2 {{ date }}
         span
           slot
@@ -35,12 +35,28 @@ export default {
 <style lang="sass" scoped>
   .column
     .card
+      height: 160px;
       .card-content
+        height: 100%;
+        padding: 0px;
         .content
           img
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
     .card-footer
       .card-footer-item
+        display: inline;
         h1
+          font-size: 13px;
+          font-weight: 600;
+          color: #555555;
         h2
+          font-size: 9px;
+          font-weight: 400;
+          color: #666666;
         span
+          font-size: 11px;
+          line-height: 1.2em;
+          display: block;
 </style>

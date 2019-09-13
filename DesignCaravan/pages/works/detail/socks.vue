@@ -1,0 +1,98 @@
+<template lang="pug">
+  div
+    div#body
+      Subtitle(jp="作品たち", en="Works")
+      div.works
+        h1.title 靴下のパッケージ
+        div.carousel
+          Carousel(:perPage="1", :paginationPadding="6")
+            slide(v-for="i in works.socks.img.item")
+              img(:src="i")
+        div.term
+          h2 制作時期
+          p 2019.May
+        div.skill
+          h2 使用技術
+          p Illustrator, レーザーカッター
+        div.abstract
+          h2 作品概要
+          p 函館で開催されたLGBTイベント「虹をはいて歩こう」の返礼品のパッケージ。サイズ別に2種類制作した。パッケージは靴下型に切り抜いて虹色が見えるようにした。
+      //div.link
+        div
+          a.prev まえの作品へ
+        div
+          a.all 作品一覧を見る
+        div
+          a.next つぎの作品へ
+      //p {{ $route.params.detail }}
+    div#footer
+
+</template>
+
+<script>
+import Card from '~/components/Card'
+import Subtitle from '~/components/Subtitle'
+import Carousel from 'vue-carousel/src/Carousel.vue'
+import Slide from 'vue-carousel/src/Slide.vue'
+
+
+export default {
+  name: 'WorksPage',
+
+  components: {
+    Card,
+    Subtitle,
+    Carousel,
+    Slide
+  },
+  data: function(){
+    return{
+      works:{
+        socks:{
+          title: "靴下のパッケージ",
+          img:{
+            thum: require('~/assets/works/socks_1.jpg'),
+            item: [require('~/assets/works/socks_1.jpg'), require('~/assets/works/socks_2.jpg'), require('~/assets/works/socks_3.jpg'), require('~/assets/works/socks_4.jpg'), ]
+          },
+          term: "数週間",
+          skill: "Illustrator, レーザーカッター",
+          subscription: "",
+          link: "/works/detail/socks",
+        },
+        
+      },
+    }
+  }
+}
+</script>
+
+<style lang="sass" scoped>
+  #body
+    padding-bottom: 100px;
+    h1
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+    h2
+      font-size: 18px;
+      margin-top: 10px;
+    .carousel
+      margin-bottom: 20px;
+      img
+        width: 335px;
+        height: 250px;
+        object-fit: cover;
+    .term
+      p
+        font-weight: 300;
+        font-size: 15px;
+    .skill
+      p
+        font-weight: 300;
+        font-size: 15px;
+    .abstract
+      p
+        font-weight: 300;
+        font-size: 15px;
+</style>

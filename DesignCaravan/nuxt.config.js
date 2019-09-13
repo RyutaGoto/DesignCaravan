@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-carousel', ssr: false },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,6 +50,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
+      svgRule.test = /\.(png|jpe?g|gif|webp)$/i
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'vue-svg-loader',
+      })
     }
   }
 }

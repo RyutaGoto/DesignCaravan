@@ -10,11 +10,11 @@
           span(aria-hidden="true")
 
       div#navbarBasicExample.navbar-menu(v-bind:class="{'is-active': isOpen}")
-        div.navbar-start
+        div.navbar-start(v-on:click="isOpen = !isOpen")
           nuxt-link.navbar-item(to="/about") Design Caravan とは
           nuxt-link.navbar-item(to="/member") キャラバンメンバー
-          nuxt-link.navbar-item(to="/works") 作品たち
-          nuxt-link.navbar-item(to="/snapshots") 旅のきろく
+          nuxt-link.navbar-item(to="/works/list") 作品たち
+          nuxt-link.navbar-item(to="/snapshots/list") 旅のきろく
           nuxt-link.navbar-item(to="/") トップページ
           
     div#body
@@ -40,7 +40,7 @@ export default {
       isOpen: false,
     }
   },
-  /*methods: {
+  methods: {
     open(){
       var app = new Vue({
         el: '#app',
@@ -49,7 +49,7 @@ export default {
         }
       })
     }
-  },*/
+  },
 }
 
 </script>
@@ -61,7 +61,7 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%
+    width: 100vw;
     #logo
       width: 63px;
       height: 58px;
@@ -71,11 +71,26 @@ export default {
     .navbar-burger
       height: 100%
       float: right;
+
+    .navbar-menu
+      height: 100vh;
+      padding-top: 70px;
+      background-color: #f5f5f5;
+      .navbar-start
+        //display: flex;
+        //flex-flow: wrap;
+        //justify-content: space-around;
+        //align-items: center;
+        .navbar-item
+          color: #666666;
+          padding-top: 30px;
+          text-align: center;
+          font-size: 28px;
       
   #body
     background-image: url("~assets/background_30.png");
     background-size: 170% auto;
-    margin-top: 70px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 40px;
+    padding-right: 5vw;
+    padding-left: 5vw;
 </style>
