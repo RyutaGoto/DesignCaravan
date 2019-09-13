@@ -141,7 +141,7 @@ export default {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    filter: opacity(60%);
+    filter: contrast(60%);
   #logo
     z-index: 20;
     width: 120px;
@@ -151,7 +151,7 @@ export default {
     //right: 0;
     bottom: 9vh;
     //margin: auto;
-    filter: opacity(100%);
+    filter: brightness(130%);
   span
     z-index: 20;
     position: absolute;
@@ -160,8 +160,8 @@ export default {
     bottom: 5vh;
     //margin: auto;
     font-size: 16px;
-    font-weight: 500;
-    color: #333333;
+    font-weight: 600;
+    color: #222;
 
 
 #body
