@@ -5,8 +5,8 @@
         Carousel(:perPage="1", :paginationEnabled="false", :autoplay="true", :loop="true",)
           Slide(v-for="i in top")
             img(:src="i")
-        img(src="~assets/logo.png", alt="")#logo
-        span 旅するデザイン
+        //img(src="~assets/logo.png", alt="")#logo
+        //span 旅するデザイン
     div#body
       div.about
         Subtitle(jp="DesignCaravan とは", en="About")

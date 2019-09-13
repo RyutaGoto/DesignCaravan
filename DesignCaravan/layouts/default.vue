@@ -93,4 +93,38 @@ export default {
     padding-top: 40px;
     padding-right: 5vw;
     padding-left: 5vw;
+
+
+  @media screen and (min-width: 600px)
+    #app
+      width: 100vw;
+      height: 98vh;
+      //position: relative;
+      .navbar
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: auto;
+        height: 12vh;
+        box-shadow: 0 -2px 5px #cccccc;
+        .navbar-brand
+          width: 12vw;
+          background-color: #f5f5f5;
+          #logo
+            padding: 0.2vh 0;
+            margin: 0 1.5vw;
+            height: 9vh;
+            width: auto;
+            max-height: 9vh;
+        #navbarBasicExample
+          height: 12vh;
+          width: 85vw;
+          padding: 0;
+          .navbar-start
+            margin: 0 4vw 0 auto;
+          .navbar-item
+            font-size: 1.3rem;
+            padding: 0 1.2vw;
+      #body
+        padding: 0;
 </style>
