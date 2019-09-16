@@ -16,12 +16,10 @@
           nuxt-link.button(to="/about") Aboutページへ→
       div.works
         Subtitle(jp="作品たち", en="Works")        
-        div
-          Card(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。
-        div
-          Card(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
-        div
-          Card(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
+        div.columns.is-centered
+          Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
+          Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
+          Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
         div.link.buttons.is-centered
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
@@ -185,5 +183,40 @@ export default {
   .snapshots
     .columns
       margin: 0 auto;
+  
+@media screen and (min-width: 600px)
+  #top
+    margin: 0;
+    
+    img
+      
+    #logo
+      
+    span
+      
+  #body
+    .discription
+      font-size: 1.4rem;
+      font-weight: 400;
+      display: block;
+      margin: 0 auto;
+      width: 65vw;
+      p
+        text-align: center;
+    .link
+      margin-top: 5vh;
+      .button
+        font-size: 1.2rem;
+        padding: 3vh 5vw;
+    .works
+      .columns
+        .column
+          width: 310px;
+          display: inline-block;
+          padding: 0;
+          margin: 3vh 1.5vw;
+    .snapshots
+      .columns
+
 
 </style>
