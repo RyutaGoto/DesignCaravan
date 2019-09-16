@@ -71,4 +71,29 @@ export default {
         h1
           margin-left: 8px;
           font-size: 12px;
+  @media screen and (min-width: 600px)
+    .column
+      .card
+        width: 350px;
+        height: 340px;
+        margin: 3px;
+        box-shadow: 1px 2px 8px rgba(10, 10, 10, 0.3);
+        .card-content
+          padding: 7px;
+          width: 100%;
+          height: 100%;
+          .content
+            width: 100%;
+            height: 100%;
+            img
+              //max-width: 100%;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+      footer
+        div
+          h1
+            margin-left: 8px;
+            font-size: 1.3rem;
+
 </style>

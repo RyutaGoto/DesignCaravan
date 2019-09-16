@@ -24,9 +24,9 @@
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
-        div.columns.is-multiline.is-mobile
+        div.columns.is-multiline.is-mobile.is-centered
           div(v-for="item in snapshots").column.is-half
-            Snapshots(:title="item.title", :imgSrc="item.img", :obj="item")
+            Snapshots(:title="item.title", :imgSrc="item.img", :obj="item").is-narrow
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
@@ -216,7 +216,14 @@ export default {
           padding: 0;
           margin: 3vh 1.5vw;
     .snapshots
+      margin-bottom: 20vh;
       .columns
+        width: 55vw;
+        .column
+          display: inline-block;
+          width: 40%;
+          height: auto;
+          margin: 0 auto;
 
 
 </style>

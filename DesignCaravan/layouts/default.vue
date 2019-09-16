@@ -89,7 +89,7 @@ export default {
       
   #body
     background-image: url("~assets/background_30.png");
-    background-size: 170% auto;
+    background-size: 90% auto;
     padding-top: 40px;
     padding-right: 5vw;
     padding-left: 5vw;
@@ -110,6 +110,7 @@ export default {
         .navbar-brand
           width: 12vw;
           background-color: #f5f5f5;
+          padding-left: 2vw;
           #logo
             padding: 0.2vh 0;
             margin: 0 1.5vw;
@@ -121,7 +122,7 @@ export default {
           width: 85vw;
           padding: 0;
           .navbar-start
-            margin: 0 4vw 0 auto;
+            margin: 0 8vw 0 auto;
           .navbar-item
             font-size: 1.3rem;
             padding: 0 1.2vw;

@@ -55,11 +55,11 @@ export default {
       margin-right: auto;
       margin-left: auto;
       margin-top: 20vh;
-      margin-bottom: 5vh;
+      margin-bottom: 3vh;
       width: 100%
       height: 20vh;
       background-image: url("~assets/sub.png");
-      background-size: 15% auto;
+      background-size: 10% auto;
       background-repeat: no-repeat;
       background-position: center center; 
       line-height: 2.5em;
