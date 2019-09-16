@@ -61,7 +61,6 @@ export default {
           display: block;
   @media screen and (min-width: 600px)
     .column
-      margin-bottom: 15vh;
       .card
         height: 40vh;
         .card-content

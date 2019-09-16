@@ -2,19 +2,13 @@
   div
     div#body
       Subtitle(jp="作品たち", en="Works")
-      div.works
-        div
-          Card(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。
-        div
-          Card(title="缶バッヂのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
-        div
-          Card(title="靴下のパッケージ", :imgSrc="works.socks.img.thum", :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
-        div
-          Card(title="くるくるレインボーマシン", :imgSrc="works.rainbow.img.thum", :link="works.rainbow.link") くるくるレインボーのデモ用マシン。素材はMDF、中身の制御にはArduinoを使用。
-        div
-          Card(title="薬莢らんぷ", :imgSrc="works.shell.img.thum", :link="works.shell.link") 空の薬莢を用いたLEDランプ。薬莢は実際の狩りに使われたものを再利用した。
-        div
-          Card(title="エコロジカ", :imgSrc="works.deer.img.thum", :link="works.deer.link") 木彫りの鹿。角を刺す穴に草やその他の植物を刺すこともできる。
+      div.works.columns.is-centered
+        Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
+        Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
+        Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
+        Card.column.is-narrow(title="くるくるレインボーマシン", :imgSrc="works.rainbow.img.thum", :link="works.rainbow.link") くるくるレインボーのデモ用マシン。素材はMDF、中身の制御にはArduinoを使用。
+        Card.column.is-narrow(title="薬莢らんぷ", :imgSrc="works.shell.img.thum", :link="works.shell.link") 空の薬莢を用いたLEDランプ。薬莢は実際の狩りに使われたものを再利用した。
+        Card.column.is-narrow(title="エコロジカ", :imgSrc="works.deer.img.thum", :link="works.deer.link") 木彫りの鹿。角を刺す穴に草やその他の植物を刺すこともできる。
         
       //div.link
         div
