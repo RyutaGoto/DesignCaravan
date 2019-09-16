@@ -7,7 +7,7 @@
           p 私達は、公立はこだて未来大学の情報デザインコース5人で結成したグループです。様々な地域を訪問し、実際にその地域の人々や自然に触れることを大切にしています。その中でそれぞれの地域の特徴を理解し、自分たちが提供できる可能性を地域の人々に呈示することを目標に活動しています。
       div.project
         Subtitle(jp="進行プロジェクト", en="Project")
-        div(v-for="item in data")
+        div#item(v-for="item in data")
           Project(:title="item.title", :date="item.date", :imgSrc="item.img") {{ item.script }}
     div#footer
 </template>
@@ -64,4 +64,20 @@ export default {
       font-size: 11px;
       text-align: center;
       padding: 20px;
+  @media screen and (min-width: 600px)
+    #body
+      .about
+        .discription
+          font-size: 1.4rem;
+          font-weight: 400;
+          display: block;
+          margin: 0 auto;
+          width: 65vw;
+          p
+            text-align: center;
+      .project
+        #item
+          margin: 0 auto;
+          width: 60vw;
+          margin-bottom: 6vh;
 </style>
