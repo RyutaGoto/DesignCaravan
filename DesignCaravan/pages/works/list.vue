@@ -2,7 +2,7 @@
   div
     div#body
       Subtitle(jp="作品たち", en="Works")
-      div.works.columns.is-centered
+      div.works.columns.is-centered.is-multiline
         Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
         Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
         Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
@@ -89,4 +89,14 @@ export default {
 <style lang="sass" scoped>
   #body
     padding-bottom: 80px;
+
+  @media screen and (min-width: 600px)
+    #body
+      padding-top: 12vh;
+      padding-right: auto;
+      padding-bottom: 20vh;
+      padding-left: auto;
+      .works
+        width: 60vw;
+        margin: 0 auto;
 </style>

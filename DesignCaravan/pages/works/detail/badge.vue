@@ -96,4 +96,38 @@ export default {
       p
         font-weight: 300;
         font-size: 15px;
+  @media screen and (min-width: 600px)
+    #body
+      padding-bottom: 20vh;
+      .works
+        width: 50vw;
+        margin: 0 auto;
+      h1
+        font-weight: 400;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+      h2
+        font-size: 1.8rem;
+        margin-top: 10px;
+      .carousel
+        width: 50vw;
+        display: block;
+        margin: 5vh auto;
+        img
+          width: 100%;
+          height: 60vh;
+          object-fit: cover;
+      .term
+        p
+          font-weight: 300;
+          font-size: 1.5rem;
+      .skill
+        p
+          font-weight: 300;
+          font-size: 1.5rem;
+      .abstract
+        p
+          font-weight: 300;
+          font-size: 1.5rem;
 </style>

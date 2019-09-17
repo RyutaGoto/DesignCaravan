@@ -66,12 +66,16 @@ export default {
       padding: 20px;
   @media screen and (min-width: 600px)
     #body
+      padding-top: 12vh;
+      padding-right: auto;
+      padding-bottom: 8vh;
+      padding-left: auto;
       .about
         .discription
           font-size: 1.4rem;
           font-weight: 400;
           display: block;
-          margin: 0 auto;
+          margin: 0 auto 17vh auto;
           width: 65vw;
           p
             text-align: center;

@@ -51,6 +51,7 @@ export default {
             box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
       .card-footer
         width: 310px;
+        height: 100px;
         position: absolute;
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.7);
@@ -93,6 +94,7 @@ export default {
               display: block;
         .card-footer
           width: 310px;
+          height: 100px;
           position: absolute;
           bottom: 0;
           right: auto;

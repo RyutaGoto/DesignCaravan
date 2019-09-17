@@ -54,8 +54,8 @@ export default {
       position: relative;
       margin-right: auto;
       margin-left: auto;
-      margin-top: 20vh;
-      margin-bottom: 3vh;
+      margin-top: 0;
+      margin-bottom: 4vh;
       width: 100%
       height: 20vh;
       background-image: url("~assets/sub.png");

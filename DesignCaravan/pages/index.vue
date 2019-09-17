@@ -185,45 +185,46 @@ export default {
       margin: 0 auto;
   
 @media screen and (min-width: 600px)
-  #top
-    margin: 0;
-    
-    img
+  div
+    #top
+      margin: 0;
       
-    #logo
-      
-    span
-      
-  #body
-    .discription
-      font-size: 1.4rem;
-      font-weight: 400;
-      display: block;
-      margin: 0 auto;
-      width: 65vw;
-      p
-        text-align: center;
-    .link
-      margin-top: 5vh;
-      .button
-        font-size: 1.2rem;
-        padding: 3vh 5vw;
-    .works
-      .columns
-        .column
-          width: 310px;
-          display: inline-block;
-          padding: 0;
-          margin: 3vh 1.5vw;
-    .snapshots
-      margin-bottom: 20vh;
-      .columns
-        width: 55vw;
-        .column
-          display: inline-block;
-          width: 40%;
-          height: auto;
-          margin: 0 auto;
+      img
+        
+      #logo
+        
+      span
+        
+    #body
+      .discription
+        font-size: 1.4rem;
+        font-weight: 400;
+        display: block;
+        margin: 0 auto;
+        width: 65vw;
+        p
+          text-align: center;
+      .link
+        margin-top: 5vh;
+        .button
+          font-size: 1.2rem;
+          padding: 3vh 5vw;
+      .works
+        .columns
+          .column
+            width: 310px;
+            display: inline-block;
+            padding: 0;
+            margin: 3vh 1.5vw;
+      .snapshots
+        margin-bottom: 20vh;
+        .columns
+          width: 55vw;
+          .column
+            display: inline-block;
+            width: 40%;
+            height: auto;
+            margin: 0 auto;
 
 
 </style>

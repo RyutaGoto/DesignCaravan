@@ -86,7 +86,6 @@ export default {
           padding-top: 30px;
           text-align: center;
           font-size: 28px;
-      
   #body
     background-image: url("~assets/background_30.png");
     background-size: 90% auto;
@@ -127,5 +126,8 @@ export default {
             font-size: 1.3rem;
             padding: 0 1.2vw;
       #body
-        padding: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
 </style>
