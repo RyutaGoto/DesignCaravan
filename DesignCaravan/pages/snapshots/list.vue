@@ -2,9 +2,9 @@
   div
     div#body
       Subtitle(jp="旅のきろく", en="Snapshots")
-      div.columns.is-multiline.is-mobile
-        div(v-for="item in snapshots").column.is-half
-          Snapshots(:title="item.title", :imgSrc="item.img", :obj="item")
+      div.columns.is-multiline.is-mobile.is-centered
+        div.column(v-for="item in snapshots")
+          Snapshots.is-narrow(:title="item.title", :imgSrc="item.img", :obj="item")
         //Snapshots.item.column.is-half(title="イカす写真", imgSrc="https://bulma.io/images/placeholders/1280x960.png")
         //div.link
           div
@@ -85,6 +85,29 @@ export default {
 
 <style lang="sass" scoped>
   #body
-    padding: 0px 10px 90px 10px;
-    
+    padding: 0px 0px 90px 0px;
+    .columns
+        width: 90vw;
+        margin: 0 auto;
+        .column
+          display: inline-block;
+          width: 40%;
+          height: auto;
+          margin: 0 auto;
+  
+  @media screen and (min-width: 600px)
+    #body
+      padding-top: 12vh;
+      padding-right: auto;
+      padding-bottom: 20vh;
+      padding-left: auto;
+      .columns
+        width: 80vw;
+        margin: 0 auto;
+        .column
+          display: inline-block;
+          width: 40%;
+          height: auto;
+          margin: 0 auto;
+
 </style>

@@ -25,8 +25,8 @@
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
         div.columns.is-multiline.is-mobile.is-centered
-          div(v-for="item in snapshots").column.is-half
-            Snapshots(:title="item.title", :imgSrc="item.img", :obj="item").is-narrow
+          div.column.is-half(v-for="item in snapshots")
+            Snapshots.is-narrow(:title="item.title", :imgSrc="item.img", :obj="item")
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
