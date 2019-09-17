@@ -73,6 +73,13 @@ export default {
 <style lang="sass" scoped>
   #body
     .member
-      padding: 0 15px 100px 15px;
+      padding: 0 10px 100px 10px;
   #footer
+
+  @media screen and (min-width: 600px)
+    #body
+      padding-top: 12vh;
+      padding-right: auto;
+      padding-bottom: 8vh;
+      padding-left: auto;
 </style>
