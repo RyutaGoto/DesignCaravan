@@ -49,6 +49,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    //analyze: true,
     extend (config, ctx) {
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'));
       svgRule.test = /\.(png|jpe?g|gif|webp)$/i

@@ -3,11 +3,11 @@
     div#body
       div.member
         Subtitle(jp="キャラバンメンバー", en="Member")
-        Member(:imgSrc="suzuki.url", :name="suzuki.name", :role="suzuki.role", :discription="suzuki.discript", :charge="suzuki.charge")
-        Member_i(:imgSrc="hinobori.url", :name="hinobori.name", :role="hinobori.role", :discription="hinobori.discript", :charge="hinobori.charge")
-        Member(:imgSrc="iwaki.url", :name="iwaki.name", :role="iwaki.role", :discription=" iwaki.discript", :charge="iwaki.charge")
-        Member_i(:imgSrc="sudo.url", :name="sudo.name", :role="sudo.role", :discription="sudo.discript", :charge="sudo.charge")
-        Member(:imgSrc="goto.url", :name="goto.name", :role="goto.role", :discription="goto.discript", :charge="goto.charge")
+        Member_(:imgSrc="suzuki.url", :name="suzuki.name", :role="suzuki.role", :discription="suzuki.discript", :charge="suzuki.charge")
+        Member_(:imgSrc="hinobori.url", :name="hinobori.name", :role="hinobori.role", :discription="hinobori.discript", :charge="hinobori.charge")
+        Member_(:imgSrc="iwaki.url", :name="iwaki.name", :role="iwaki.role", :discription=" iwaki.discript", :charge="iwaki.charge")
+        Member_(:imgSrc="sudo.url", :name="sudo.name", :role="sudo.role", :discription="sudo.discript", :charge="sudo.charge")
+        Member_(:imgSrc="goto.url", :name="goto.name", :role="goto.role", :discription="goto.discript", :charge="goto.charge")
     div#footer
 
 </template>
@@ -17,6 +17,7 @@ import Card from '~/components/Card'
 import Member from '~/components/Member'
 import Member_i from '~/components/Member_inverse'
 import Subtitle from '~/components/Subtitle'
+import Member_ from '~/components/Member_'
 
 export default {
   name: 'MemberPage',
@@ -26,6 +27,7 @@ export default {
     Member,
     Member_i,
     Subtitle,
+    Member_,
   },
   data: function(){
     return{
@@ -33,36 +35,36 @@ export default {
         url: require('../assets/members/suzuki.png'),
         name: "鈴木ほのか",
         role: "リーダー",
-        discript: "頼れるリーダー。メンバーやスケジュールのマネジメントだけでなく、ものづくりやデザインに対する意識もすごい。結構マイペース。スマートフォンは使い捨て派。あとサメがすごく好き。",
+        discript: "頼れるリーダー。メンバーやスケジュールのマネジメントだけでなく、ものづくりやデザインに対する意識もすごい。結構マイペース。スマートフォンは使い捨て派。あとサメがすごく好き。たまに5歳児。",
         charge: "グラフィック、写真、色々"
       },
       hinobori:{
         url: require('../assets/members/hinobori.png'),
         name: "日登舞",
         role: "副リーダー",
-        discript: "頼れる副リーダー。主にグラフィカル部分を担当していて、これまでにフライヤー、パネルなどの制作を手がけてきた。音楽バンド「KUWADATE-HAKODATE」ではピアノなどを担当している。",
+        discript: "頼れる副リーダー。主にグラフィカル部分を担当していて、これまでにフライヤー、パネルなどの制作を手がけてきた。音楽バンド「KUWADATE-HAKODATE」ではピアノなどを担当している。あと「しきフレ」を眺める人。",
         charge: "グラフィック、プロダクト、ピアノ、色々"
       },
       iwaki:{
         url: require('../assets/members/iwaki.png'),
         name: "岩城一真",
         role: "電気工事おじさん",
-        discript: "資格取得して電気工事ができるようになった。秋の函館BAR街では実際に配線をよしなにやってくれていた。あと写真をたくさん撮ってくれるメンバーでもある。",
+        discript: "資格取得して電気工事ができるようになった。秋の函館BAR街では実際に配線をよしなにやってくれていた。また、写真をたくさん撮ってくれるメンバーでもある。あとなにを隠そうプロデューｓ…",
         charge: "電気工事、写真、電子工作、ハイエース、しぶりん、色々"
       },
       sudo:{
         url: require('../assets/members/sudo.png'),
         name: "須藤翼",
         role: "おとうさん",
-        discript: "RHPでくるくるレインボーのデモ機や、中間発表用の動画を制作してきた。主に電子工作、映像担当のおとうさん。現在は3Dモデリングを用いた作品制作に注力している。",
+        discript: "RHPでくるくるレインボーのデモ機や、中間発表用の動画を制作してきた。主に電子工作、映像担当のおとうさん。現在は3Dモデリングを用いた作品制作に注力しているモデリングおじさん。パパすごい",
         charge: "映像制作、電子工作、みんなのパパ、色々"
       },
       goto:{
         url: require('../assets/members/goto.png'),
         name: "後藤隆太",
-        role: "Web担当",
-        discript: "主にWeb周りを担当している。無料版wordpressの見た目どうにかしなきゃいけなかったときはタグの中に直書きをするなど、手段は選ばない人間。",
-        charge: "Web、ガンプラ、色々"
+        role: "留退力学の申し子",
+        discript: "無料版wordpressの見た目どうにかしなきゃいけなかったときはタグの中に直書きをするなど、手段は選ばない人間。最近イヤホン失くしたので見つけたら連絡ください。",
+        charge: "Web、ガンプラ、速水奏、色々"
       },
       
     }
@@ -73,13 +75,14 @@ export default {
 <style lang="sass" scoped>
   #body
     .member
-      padding: 0 10px 100px 10px;
+      padding: 0 10px 80px 10px;
   #footer
 
   @media screen and (min-width: 600px)
     #body
+      //padding: 12vh auto 8vh auto;
       padding-top: 12vh;
-      padding-right: auto;
-      padding-bottom: 8vh;
-      padding-left: auto;
+      //padding-right: auto;
+      padding-bottom: 10vh;
+      //padding-left: auto;
 </style>

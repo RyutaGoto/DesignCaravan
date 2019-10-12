@@ -5,7 +5,7 @@
       div.works
         h1.title RHPスタンプ
         div.carousel
-          Carousel(:perPage="1", :paginationPadding="6")
+          Carousel(:perPage="1", :paginationPadding="6" :paginationColor="'#c0c0c0'")
             slide(v-for="i in works.stamp.img.item")
               img(:src="i")
         div.term
@@ -13,7 +13,7 @@
           p 2019.May
         div.skill
           h2 使用技術
-          p Illustrator, Photoshop, レーザーカッター
+          p Illustrator, Photoshop
         div.abstract
           h2 作品概要
           p 函館で開催されたLGBTイベント「虹をはいて歩こう」のスタンプラリー用に制作した。スタンプには地元が産地の道南杉とゴム材を使用した。スタンプ上面にはイベントのテーマを象徴するアイコンをレーザーで彫った。

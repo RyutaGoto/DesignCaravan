@@ -27,6 +27,10 @@ export default {
     imgSrc: {
       type: String,
       required: true
+    },
+    link: {
+      type: String,
+      required: true
     }
   }
 }
@@ -34,6 +38,7 @@ export default {
 
 <style lang="sass" scoped>
   .column
+    padding: 3px 0 20px 0;
     .card
       height: 160px;
       .card-content
@@ -47,16 +52,17 @@ export default {
     .card-footer
       .card-footer-item
         display: inline;
+        padding: 12px 0;
         h1
-          font-size: 13px;
+          font-size: 0.9rem;
           font-weight: 600;
           color: #555555;
         h2
-          font-size: 9px;
+          font-size: 0.8rem;
           font-weight: 400;
           color: #666666;
         span
-          font-size: 11px;
+          font-size: 0.8rem;
           line-height: 1.2em;
           display: block;
   @media screen and (min-width: 600px)
@@ -84,7 +90,7 @@ export default {
             color: #666666;
             //padding-left: 1vw;
           span
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.2em;
             display: block;
             //padding-left: 1vw;

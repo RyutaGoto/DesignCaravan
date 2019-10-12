@@ -126,6 +126,7 @@ export default {
             font-size: 1.3rem;
             padding: 0 1.2vw;
       #body
+        //padding: auto;
         padding-top: 0;
         padding-right: 0;
         padding-bottom: 0;

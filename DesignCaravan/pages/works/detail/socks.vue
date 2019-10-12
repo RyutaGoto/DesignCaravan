@@ -5,7 +5,7 @@
       div.works
         h1.title 靴下のパッケージ
         div.carousel
-          Carousel(:perPage="1", :paginationPadding="6")
+          Carousel(:perPage="1", :paginationPadding="6" :paginationColor="'#c0c0c0'")
             slide(v-for="i in works.socks.img.item")
               img(:src="i")
         div.term
@@ -13,7 +13,7 @@
           p 2019.May
         div.skill
           h2 使用技術
-          p Illustrator, レーザーカッター
+          p Illustrator
         div.abstract
           h2 作品概要
           p 函館で開催されたLGBTイベント「虹をはいて歩こう」の返礼品のパッケージ。サイズ別に2種類制作した。パッケージは靴下型に切り抜いて虹色が見えるようにした。

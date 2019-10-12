@@ -3,9 +3,9 @@
     div#body
       Subtitle(jp="作品たち", en="Works")
       div.works
-        h1.title RHPスタンプ
+        h1.title RHPスタンプ 
         div.carousel
-          Carousel(:perPage="1", :paginationPadding="6")
+          Carousel(:perPage="1", :paginationPadding="6" :paginationColor="'#c0c0c0'")
             slide(v-for="i in works.rainbow.img.item")
               img(:src="i")
         div.term
@@ -13,7 +13,7 @@
           p 2019.May
         div.skill
           h2 使用技術
-          p Illustrator, Photoshop, レーザーカッター
+          p Illustrator, Photoshop
         div.abstract
           h2 作品概要
           p 函館で開催されたLGBTイベント「虹をはいて歩こう」で制作するくるくるレインボーを自動で回すデモ機。筐体にはMDFを用いて強度を確保した。また、連続して順方向と逆方向に回転するためにブリッジ回路を組んだ。
@@ -35,6 +35,9 @@ import Subtitle from '~/components/Subtitle'
 import Carousel from 'vue-carousel/src/Carousel.vue'
 import Slide from 'vue-carousel/src/Slide.vue'
 
+const axios = require('axios');
+
+let url = "https://designcaravan-60b57.firebaseio.com/works.json"
 
 export default {
   name: 'WorksPage',
@@ -62,7 +65,7 @@ export default {
         
       },
     }
-  }
+  },
 }
 </script>
 

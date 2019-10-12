@@ -5,7 +5,7 @@
       div.works
         h1.title エコロジカ
         div.carousel
-          Carousel(:perPage="1", :paginationPadding="6")
+          Carousel(:perPage="1", :paginationPadding="6" :paginationColor="'#c0c0c0'")
             slide(v-for="i in works.deer.img.item")
               img(:src="i")
         div.term

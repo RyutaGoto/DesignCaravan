@@ -78,7 +78,14 @@ export default {
         require('~/assets/top/top_21.png'),
         require('~/assets/top/top_22.png'),
         require('~/assets/top/top_23.png'),
-        require('~/assets/top/top_24.png'),   
+        require('~/assets/top/top_24.png'),
+        //require('~/assets/top/top_25.png'),
+        //require('~/assets/top/top_26.png'),
+        //require('~/assets/top/top_27.png'),
+        //require('~/assets/top/top_28.png'),
+        //require('~/assets/top/top_29.png'),
+        //require('~/assets/top/top_30.png'),
+         
       ],
       works:{
         stamp:{

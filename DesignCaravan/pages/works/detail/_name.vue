@@ -3,20 +3,20 @@
     div#body
       Subtitle(jp="作品たち", en="Works")
       div.works
-        h1.title RHPスタンプ
+        h1.title {{ json_data.name }}
         div.carousel
-          Carousel(:perPage="1", :paginationPadding="6")
-            Slide(v-for="i in works.stamp.img.item")
+          Carousel(:perPage="1", :paginationPadding="6" :paginationColor="'#c0c0c0'")
+            slide(v-for="i in json_data.item")
               img(:src="i")
         div.term
           h2 制作時期
-          p 2019.May
+          p {{ json_data.period }}
         div.skill
           h2 使用技術
-          p Illustrator, Photoshop, レーザーカッター
+          p {{ json_data.skill }}
         div.abstract
           h2 作品概要
-          p めっちゃスタンプ押すやつ、かっこいい、すごく最の高。ハチャメチャに格好が良すぎるんじゃこのスタンプ。ところで作品ごとに誰が担当したかとか書いたほうがええんかな。それはもしかしていらん…？
+          p {{ json_data.discription }}
       //div.link
         div
           a.prev まえの作品へ
@@ -35,6 +35,7 @@ import Subtitle from '~/components/Subtitle'
 import Carousel from 'vue-carousel/src/Carousel.vue'
 import Slide from 'vue-carousel/src/Slide.vue'
 
+const axios = require('axios');
 
 export default {
   name: 'WorksPage',
@@ -48,19 +49,27 @@ export default {
   data: function(){
     return{
       works:{
-        deer:{
-          title: "エコロジカ",
+        rainbow:{
+          title: "",
           img:{
-            thum: require('~/assets/works/deer_1.jpg'),
+            thum: require('~/assets/works/rainbow_1.jpg'),
+            item: [require('~/assets/works/rainbow_1.jpg'), require('~/assets/works/rainbow_2.jpg'), require('~/assets/works/rainbow_3.jpg'), require('~/assets/works/rainbow_4.jpg'), require('~/assets/works/rainbow_5.jpg'), ]
           },
           term: "数週間",
-          skill: "木彫り",
+          skill: "Illustrator, レーザーカッター, Arduino",
           subscription: "",
-          link: "/works/detail/deer",
+          link: "/works/detail/rainbow",
         },
         
       },
     }
+  },
+  asyncData: async function({params}){
+    let url = "https://designcaravan-60b57.firebaseio.com/works/" + params.name + ".json";
+    let result = await axios.get(url);
+    return {
+      json_data: result.data,
+    };
   }
 }
 </script>
@@ -79,6 +88,9 @@ export default {
     .carousel
       margin-bottom: 20px;
       img
+        width: 335px;
+        height: 250px;
+        object-fit: cover;
     .term
       p
         font-weight: 300;
