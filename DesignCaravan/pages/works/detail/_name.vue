@@ -47,22 +47,7 @@ export default {
     Slide
   },
   data: function(){
-    return{
-      works:{
-        rainbow:{
-          title: "",
-          img:{
-            thum: require('~/assets/works/rainbow_1.jpg'),
-            item: [require('~/assets/works/rainbow_1.jpg'), require('~/assets/works/rainbow_2.jpg'), require('~/assets/works/rainbow_3.jpg'), require('~/assets/works/rainbow_4.jpg'), require('~/assets/works/rainbow_5.jpg'), ]
-          },
-          term: "数週間",
-          skill: "Illustrator, レーザーカッター, Arduino",
-          subscription: "",
-          link: "/works/detail/rainbow",
-        },
-        
-      },
-    }
+    
   },
   asyncData: async function({params}){
     let url = "https://designcaravan-60b57.firebaseio.com/works/" + params.name + ".json";
@@ -71,6 +56,13 @@ export default {
       json_data: result.data,
     };
   }
+  /*
+  asyncData({ params }){
+    return{
+      json_data: require('~/assets/json/data.json')
+    }
+  }
+  */
 }
 </script>
 

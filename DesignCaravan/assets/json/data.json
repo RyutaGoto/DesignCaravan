@@ -1,45 +1,80 @@
 {
-    "works": [
-        {
-            "name": "testname",
-            "displayName": "display",
-            "discritption": "discript",
-            "img": [
-                "",
-                "",
-                ""
-            ],
-            "term": "",
-            "skill": "",
-            "abstract": ""
-        },
-        {
-            "name": "",
-            "displayName": "",
-            "discritption": "",
-            "img": [
-                "",
-                "",
-                ""
-            ],
-            "term": "",
-            "skill": "",
-            "abstract": ""
-        }
-    ],
-    "snapshots": [
-        {
-            "title": "",
-            "img": "",
-            "discription": "",
-            "date": ""
-        },
-        {
-            "title": "",
-            "img": "",
-            "discription": "",
-            "date": ""
-        }
-        
-    ]
-}
+    "badge" : {
+      "abstract" : "LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。",
+      "discription" : "函館で開催されたLGBTイベント「虹をはいて歩こう」の返礼品として制作した。様々なバージョンを制作して試行錯誤の末、この形にたどり着いた。パッケージ下部にはRainbowHakodateProjectのロゴとサイトQRコードを加えた。",
+      "item" : [ "/works/badge_1.jpg", "/works/badge_2.jpg", "/works/badge_3.jpg" ],
+      "name" : "缶バッジのパッケージ",
+      "period" : "2019.5",
+      "project" : "rhp",
+      "skill" : "Illustrator"
+    },
+    "deer" : {
+      "abstract" : "木彫りの鹿。角を刺す穴に草やその他の植物を刺すこともできる。",
+      "discription" : "木彫りのシカ。角をつけたままにしておくと折れる原因にもなるため、収納するためのパッケージを考案した。パッケージにはいくつか種類があり、首掛けのもの、肩がけのもの、背中に背負うものなど、様々制作した。",
+      "item" : [ "/works/deer_1.jpg", "/works/deer_2.jpg", "/works/deer_3.jpg", "/works/deer_4.jpg", "/works/deer_5.jpg" ],
+      "name" : "エコロジカ",
+      "period" : "2019.6",
+      "project" : "bar",
+      "skill" : "手とかそのへんの何かしら"
+    },
+    "rainbow" : {
+      "abstract" : "くるくるレインボーのデモ用マシン。素材はMDF、中身の制御にはArduinoを使用。",
+      "discription" : "函館で開催されたLGBTイベント「虹をはいて歩こう」で制作するくるくるレインボーを自動で回すデモ機。筐体にはMDFを用いて強度を確保した。また、連続して順方向と逆方向に回転するためにブリッジ回路を組んだ。",
+      "item" : [ "/works/rainbow_1.jpg", "/works/rainbow_2.jpg", "/works/rainbow_3.jpg", "/works/rainbow_4.jpg", "/works/rainbow_5.jpg" ],
+      "name" : "くるくるレインボーマシン",
+      "period" : "2019.5",
+      "project" : "rhp",
+      "skill" : "Illustrator"
+    },
+    "shell" : {
+      "abstract" : "空の薬莢を用いたLEDランプ。薬莢は実際の狩りに使われたものを再利用した。",
+      "discription" : "狩りに使用した弾丸から発生する薬莢を用いたLEDランプ。道南で活動するハンターさんから頂いたものの活用法を考えたものである。台座には道南杉の角材を彫ったものを使用している。",
+      "item" : [ "/works/shell_1.jpg", "/works/shell_2.jpg", "/works/shell_3.jpg", "/works/shell_4.jpg", "/works/shell_5.jpg", "/works/shell_6.jpg", "/works/shell_7.jpg", "/works/shell_8.jpg" ],
+      "name" : "薬莢らんぷ",
+      "period" : "2019.6",
+      "project" : "bar",
+      "skill" : "CAD"
+    },
+    "socks" : {
+      "abstract" : "LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。",
+      "discription" : "函館で開催されたLGBTイベント「虹をはいて歩こう」の返礼品のパッケージ。サイズ別に2種類制作した。パッケージは靴下型に切り抜いて虹色が見えるようにした。",
+      "item" : [ "/works/socks_1.jpg", "/works/socks_2.jpg", "/works/socks_3.jpg", "/works/socks_4.jpg" ],
+      "name" : "靴下のパッケージ",
+      "period" : "2019.5",
+      "project" : "rhp",
+      "skill" : "Illustrator"
+    },
+    "stamp" : {
+      "abstract" : "道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。",
+      "discription" : "函館で開催されたLGBTイベント「虹をはいて歩こう」のスタンプラリー用に制作した。スタンプには地元が産地の道南杉とゴム材を使用した。スタンプ上面にはイベントのテーマを象徴するアイコンをレーザーで彫った。",
+      "item" : [ "/works/stamp_1.jpg", "/works/stamp_2.jpg", "/works/stamp_3.jpg", "/works/stamp_4.jpg", "/works/stamp_5.jpg", "/works/stamp_6.jpg", "/works/stamp_7.jpg" ],
+      "name" : "RHPスタンプ",
+      "period" : "2019.5",
+      "project" : "rhp",
+      "skill" : "Illustrator"
+    },
+    "test" : {
+      "abstract" : "teste",
+      "discription" : "dadalkj",
+      "item" : [ "/works/rainbow_2.jpg", "/works/rainbow_2.jpg", "/works/rainbow_2.jpg" ],
+      "name" : "test",
+      "period" : "ldkja",
+      "project" : "akkkk",
+      "skill" : "imas"
+    },
+    "test2" : {
+      "abstract" : "俺の推しだよ",
+      "discription" : "orenoosi",
+      "item" : [
+        "/works/rainbow_2.jpg",
+        "/works/rainbow_2.jpg",
+        "/works/rainbow_2.jpg",
+        "/works/rainbow_2.jpg"
+      ],
+      "name" : "速水奏",
+      "period" : "なんだよ制作時期って",
+      "project" : "cinderella",
+      "skill" : "尊い"
+    }
+  }
+  
