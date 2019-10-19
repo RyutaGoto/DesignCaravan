@@ -15,11 +15,14 @@
         div.link.buttons.is-centered
           nuxt-link.button(to="/about") Aboutページへ→
       div.works
+        //h1 {{ rev_json_works }}
         Subtitle(jp="作品たち", en="Works")        
-        div.columns.is-centered
-          Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
-          Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
-          Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
+        div.columns.is-centered.is-multiline.is-mobile
+          div.column.is-narrow(v-for="i in rev_json_works")
+            Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}
+          //Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
+          //Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
+          //Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
         div.link.buttons.is-centered
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
@@ -41,6 +44,7 @@ import Carousel from 'vue-carousel/src/Carousel.vue'
 import Slide from 'vue-carousel/src/Slide.vue'
 import SvgElement from '~/components/SvgElement.vue'
 
+const axios = require('axios');
 
 export default {
   name: 'HomePage',
@@ -130,6 +134,36 @@ export default {
         },        
       ]
     }
+  },
+  asyncData: async function({params}){
+    let works = "https://designcaravan-60b57.firebaseio.com/works.json";
+    let snap = "https://designcaravan-60b57.firebaseio.com/snap.json";
+    
+    let res_works = await axios.get(works);
+    let res_snap = await axios.get(snap);
+
+    //オブジェクトのソート
+    var sorted = {
+      "data" : [],
+    };
+    var array = [];
+    for (var i = 0; i < res_works.data.length; i++) {
+      array[i] = i;
+    }
+    array.reverse();
+    var j = array.length - 1;
+    for (var i = 0; i < res_works.data.length; i++) {
+      sorted.data[j] = res_works.data[i];
+      j = j - 1;
+    }
+    return {
+      json_works: res_works.data,
+      json_snap: res_snap.data,
+      rev_json_works : sorted.data,
+
+    };
+  },
+  computed: {
   }
 }
 </script>

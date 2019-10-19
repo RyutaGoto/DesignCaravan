@@ -4,15 +4,7 @@
       Subtitle(jp="作品たち", en="Works")
       div.works.columns.is-centered.is-multiline.is-mobile
         div.column.is-narrow(v-for="i in json_data")
-          //h1 {{Object.keys(json_data)}}
           Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}        
-      //div.works.columns.is-centered.is-multiline.is-mobile
-        Card.column.is-narrow(:title="json_data.stamp.name", :imgSrc="json_data.stamp.item[0]", link="/works/detail/stamp") {{ json_data.stamp.abstract }}        
-        Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
-        Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
-        Card.column.is-narrow(title="くるくるレインボーマシン", :imgSrc="works.rainbow.img.thum", :link="works.rainbow.link") くるくるレインボーのデモ用マシン。素材はMDF、中身の制御にはArduinoを使用。
-        Card.column.is-narrow(title="薬莢らんぷ", :imgSrc="works.shell.img.thum", :link="works.shell.link") 空の薬莢を用いたLEDランプ。薬莢は実際の狩りに使われたものを再利用した。
-        Card.column.is-narrow(title="エコロジカ", :imgSrc="works.deer.img.thum", :link="works.deer.link") 木彫りの鹿。角を刺す穴に草やその他の植物を刺すこともできる。
     div#footer
 
 </template>
