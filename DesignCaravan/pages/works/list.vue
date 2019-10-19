@@ -3,6 +3,10 @@
     div#body
       Subtitle(jp="作品たち", en="Works")
       div.works.columns.is-centered.is-multiline.is-mobile
+        div.column.is-narrow(v-for="i in json_data")
+          //h1 {{Object.keys(json_data)}}
+          Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}        
+      //div.works.columns.is-centered.is-multiline.is-mobile
         Card.column.is-narrow(:title="json_data.stamp.name", :imgSrc="json_data.stamp.item[0]", link="/works/detail/stamp") {{ json_data.stamp.abstract }}        
         Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
         Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
