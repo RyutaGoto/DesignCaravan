@@ -18,18 +18,15 @@
         //h1 {{ rev_json_works }}
         Subtitle(jp="作品たち", en="Works")        
         div.columns.is-centered.is-multiline.is-mobile
-          div.column.is-narrow(v-for="i in rev_json_works")
-            Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}
-          //Card.column.is-narrow(title="RHPスタンプ", :imgSrc="works.stamp.img.thum", :link="works.stamp.link") 道南杉とMDFで作成したスタンプ。上面にはイベント用でのロゴマークをあしらってある。        
-          //Card.column.is-narrow(title="缶バッジのパッケージ", :imgSrc="works.badge.img.thum", :link="works.badge.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。        
-          //Card.column.is-narrow(title="靴下のパッケージ", :imgSrc="works.socks.img.thum" :link="works.socks.link") LGBTイベント「虹をはいて歩こう」での返礼品のパッケージ。
+          div.column.is-narrow(v-for="(i, index) in json_works",v-if="index < 3")
+            Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}          
         div.link.buttons.is-centered
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
         div.columns.is-multiline.is-mobile.is-centered
-          div.column.is-half(v-for="item in snapshots")
-            Snapshots.is-narrow(:title="item.title", :imgSrc="item.img", :obj="item")
+          div.column.is-half(v-for="(i, index) in json_snap", v-if="index < 4")
+            Snapshots.is-narrow(:title="i.name", :imgSrc="i.item", :obj="i")
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
@@ -136,31 +133,53 @@ export default {
     }
   },
   asyncData: async function({params}){
+    /*
+    if (process.browser) {
+      const mq = window.matchMedia( "(min-width: 600px)" );
+    }
+    */
     let works = "https://designcaravan-60b57.firebaseio.com/works.json";
-    let snap = "https://designcaravan-60b57.firebaseio.com/snap.json";
+    let snap = "https://designcaravan-60b57.firebaseio.com/snapshots.json";
     
     let res_works = await axios.get(works);
     let res_snap = await axios.get(snap);
 
-    //オブジェクトのソート
-    var sorted = {
+    var sort_works = {
       "data" : [],
     };
-    var array = [];
-    for (var i = 0; i < res_works.data.length; i++) {
-      array[i] = i;
+    var sort_snap = {
+      "data" : [],
+    };
+
+    var works_limit = 0;
+    var snap_limit = 0;
+  /*
+    if (mq.matches) {
+      works_limit = 6;
+      snap_limit = 8;
     }
-    array.reverse();
-    var j = array.length - 1;
+    else {
+      works_limit = 3;
+      snap_limit = 4;
+    }
+    */
+    //worksオブジェクトのソート
+    var j = res_works.data.length - 1;
     for (var i = 0; i < res_works.data.length; i++) {
-      sorted.data[j] = res_works.data[i];
+      sort_works.data[j] = res_works.data[i];
       j = j - 1;
     }
+    
+    //snapオブジェクトのソート
+    var j = res_snap.data.length - 1;
+    for(var i = 0; i < res_snap.data.length; i++){
+      sort_snap.data[j] = res_snap.data[i];
+      j = j - 1;
+    }
+    
     return {
-      json_works: res_works.data,
-      json_snap: res_snap.data,
-      rev_json_works : sorted.data,
-
+      json_works: sort_works.data,
+      json_snap: sort_snap.data,
     };
   },
   computed: {
