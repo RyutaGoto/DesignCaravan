@@ -26,10 +26,21 @@ export default {
   data: function(){
   },
   asyncData: async function({params}){
-    let url = "https://designcaravan-60b57.firebaseio.com/snapshots.json";
-    let result = await axios.get(url);
+    let snap = "https://designcaravan-60b57.firebaseio.com/snapshots.json";
+    let res_snap = await axios.get(snap);
+
+    var sort_snap = {
+      "data" : [],
+    };
+
+    var j = res_snap.data.length - 1;
+    for (var i = 0; i < res_snap.data.length; i++) {
+      sort_snap.data[j] = res_snap.data[i];
+      j = j - 1;
+    }
+
     return {
-      json_data: result.data,
+      json_data: sort_snap.data,
     };
   }
 }

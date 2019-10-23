@@ -68,10 +68,21 @@ export default {
     }
   },
   asyncData: async function({params}){
-    let url = "https://designcaravan-60b57.firebaseio.com/works.json";
-    let result = await axios.get(url);
+    let works = "https://designcaravan-60b57.firebaseio.com/works.json";
+    let res_works = await axios.get(works);
+
+    var sort_works = {
+      "data" : [],
+    };
+
+    var j = res_works.data.length - 1;
+    for (var i = 0; i < res_works.data.length; i++) {
+      sort_works.data[j] = res_works.data[i];
+      j = j - 1;
+    }
+
     return {
-      json_data: result.data,
+      json_data: sort_works.data,
     };
   }
 }

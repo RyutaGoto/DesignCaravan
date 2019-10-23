@@ -22,14 +22,16 @@
         h1
           span.num 03
           span.char 進行プロジェクト
-        div#item(v-for="item in data")
-          Project(:title="item.title", :date="item.date", :imgSrc="item.img", :link="item.link") {{ item.script }}
+        div#item(v-for="i in json_about")
+          Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
     div#footer
 </template>
 
 <script>
 import Project from '~/components/Project'
 import Subtitle from '~/components/Subtitle'
+
+const axios = require('axios');
 
 export default {
   name: 'AboutPage',
@@ -41,41 +43,28 @@ export default {
 
   data: function(){
     return{
-      data: [
-        {
-          title: "世界で一冊だけの本・展",
-          date: "2019.11 ",
-          img: require('~/assets/about/project/hon.png'),
-          script: "函館で毎年秋に開催されている「世界に一冊だけの本・展」に出展します。一年間の活動を通して学んだことや感じたことをまとめ、一冊の本を制作し、この一年の集大成と考えています。",
-          link: "https://handmadebook.wixsite.com/book"
-        },
-        {
-          title: "森町木育活動",
-          date: "2019.7 ~ ",
-          img: require('~/assets/about/project/kidukai.png'),
-          script: "森町では森林環境剰余税の支給に伴い、新しい試みとして道南杉の出生証明書、親から子供に贈るウッドファーストトイの制作の協力を行います。森町の高校生とともに、これらを制作する上でのデザイン案や新しいアイデアなどを提案します。",
-        },
-        {
-          title: "モビールワークショップ",
-          date: "2019.5 ~ ",
-          img: require('~/assets/about/project/mobile.png'),
-          script: "洞爺湖、無印良品シエスタハコダテ、森町産業祭、函館青年青年センターで「風とあそぼう」と題し、モビール制作ワークショップを行いました。小さな子供から大人まで幅広い年代の人たちが参加し、参加者全員が思い思いのモビールを制作しました。",
-        },
-        {
-          title: "レインボーはこだてプロジェクト",
-          date: "2019.3 ~ ",
-          img: require('~/assets/about/project/rainbow.png'),
-          script: "LGBTフレンドリーなまちづくりをテーマに活動する団体であるRHP(レインボーはこだてプロジェクト)主催のイベント、「虹をはいて歩こう」にデザインチームとして参加しました。イベント広報用のポスターやチラシ、返礼品パッケージ、イベントを盛り上げる装置や物品の制作など行いました。",
-        },
-        {
-          title: "バル街",
-          date: "2019.3 , 2019.9",
-          img: require('~/assets/about/project/bar.png'),
-          script: "函館と江差のバル街に参加しました。函館では店舗の設営から運営のお手伝いをしてきました。江差ではライブ、作品出展のために参加しました。作品は薬莢の新たな活用法として制作した薬莢らんぷ、原田先生が制作したエコロジカなどを販売させていただきました。",
-        },        
-      ]  
+      data: []  
     }
-  }
+  },
+  asyncData: async function({params}){
+    let about = "https://designcaravan-60b57.firebaseio.com/about.json";
+    let res_about = await axios.get(about);
+
+    var sort_about = {
+      "data" : [],
+    };
+
+    //worksオブジェクトのソート
+    var j = res_about.data.length - 1;
+    for (var i = 0; i < res_about.data.length; i++) {
+      sort_about.data[j] = res_about.data[i];
+      j = j - 1;
+    }
+    
+    return {
+      json_about: sort_about.data,
+    };
+  },
 }
 </script>
 

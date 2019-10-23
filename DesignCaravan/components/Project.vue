@@ -28,17 +28,13 @@ export default {
       type: String,
       required: true
     },
-    link: {
-      type: String,
-      required: true
-    }
   }
 }
 </script>
 
 <style lang="sass" scoped>
   .column
-    padding: 3px 0 20px 0;
+    padding: 3px 0 40px 0;
     .card
       height: 160px;
       .card-content

@@ -88,48 +88,6 @@ export default {
         //require('~/assets/top/top_30.png'),
          
       ],
-      works:{
-        stamp:{
-          img:{
-            thum: require('~/assets/works/stamp_1.jpg'),
-          },
-          link: "/works/detail/stamp",
-        },
-        badge:{
-          img:{
-            thum: require('~/assets/works/badge_1.jpg'),
-          },
-          link: "/works/detail/badge",
-        },
-        socks:{
-          img:{
-            thum: require('~/assets/works/socks_1.jpg')
-          },
-          link: "/works/detail/socks",
-        },
-      },
-      snapshots:[
-        {
-          img: require('~/assets/snapshots/1.jpg'),
-          title: "サービスエリアで休憩",
-          date: "2019.July.1",
-        },
-        {
-          img: require('~/assets/snapshots/2.jpg'),
-          title: "札持ちとりっぴーさん",
-          date: "2019.June.28",
-        },
-        {
-          img: require('~/assets/snapshots/3.jpg'),
-          title: "すどやん！！",
-          date: "2019.June.28",
-        },
-        {
-          img: require('~/assets/snapshots/4.jpg'),
-          title: "ぐーな二人",
-          date: "2019.June.28",
-        },        
-      ]
     }
   },
   asyncData: async function({params}){
@@ -153,7 +111,7 @@ export default {
 
     var works_limit = 0;
     var snap_limit = 0;
-  /*
+    /*
     if (mq.matches) {
       works_limit = 6;
       snap_limit = 8;
