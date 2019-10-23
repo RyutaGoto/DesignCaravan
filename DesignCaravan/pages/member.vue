@@ -3,31 +3,27 @@
     div#body
       div.member
         Subtitle(jp="キャラバンメンバー", en="Member")
-        Member_(:imgSrc="suzuki.url", :name="suzuki.name", :role="suzuki.role", :discription="suzuki.discript", :charge="suzuki.charge")
-        Member_(:imgSrc="hinobori.url", :name="hinobori.name", :role="hinobori.role", :discription="hinobori.discript", :charge="hinobori.charge")
-        Member_(:imgSrc="iwaki.url", :name="iwaki.name", :role="iwaki.role", :discription=" iwaki.discript", :charge="iwaki.charge")
-        Member_(:imgSrc="sudo.url", :name="sudo.name", :role="sudo.role", :discription="sudo.discript", :charge="sudo.charge")
-        Member_(:imgSrc="goto.url", :name="goto.name", :role="goto.role", :discription="goto.discript", :charge="goto.charge")
+        Member(:imgSrc="suzuki.url", :name="suzuki.name", :role="suzuki.role", :discription="suzuki.discript", :charge="suzuki.charge")
+        Member(:imgSrc="hinobori.url", :name="hinobori.name", :role="hinobori.role", :discription="hinobori.discript", :charge="hinobori.charge")
+        Member(:imgSrc="iwaki.url", :name="iwaki.name", :role="iwaki.role", :discription=" iwaki.discript", :charge="iwaki.charge")
+        Member(:imgSrc="sudo.url", :name="sudo.name", :role="sudo.role", :discription="sudo.discript", :charge="sudo.charge")
+        Member(:imgSrc="goto.url", :name="goto.name", :role="goto.role", :discription="goto.discript", :charge="goto.charge")
     div#footer
 
 </template>
 
 <script>
 import Card from '~/components/Card'
-import Member from '~/components/Member'
-import Member_i from '~/components/Member_inverse'
 import Subtitle from '~/components/Subtitle'
-import Member_ from '~/components/Member_'
+import Member from '~/components/Member'
 
 export default {
   name: 'MemberPage',
 
   components: {
     Card,
-    Member,
-    Member_i,
     Subtitle,
-    Member_,
+    Member,
   },
   data: function(){
     return{

@@ -1,16 +1,15 @@
 <template lang="pug">
-  div.columns.is-centered.is-mobile
-    div.column
-      div.card-content
-        div.content
-          img(:src="imgSrc", alt="")
-    div.column
-      div.footer-item
-        h1 {{ name }}
-        h2 {{ role }}
-        span {{ discription }}
-        h3 担当：{{ charge }}
-
+    div.columns.is-centered.is-desktop
+        div.column
+            div.card-content
+                div.content
+                    img(:src="imgSrc", alt="")
+        div.column
+            div.footer-item
+                h1 {{ name }}
+                h2 {{ role }}
+                span {{ discription }}
+                h3 担当：{{ charge }}
 </template>
 
 <script>
@@ -42,64 +41,42 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  .columns
-    .column
-      margin-top: 35px;
-      margin-right: 10px;
-      max-width: 190px;
-      max-height: 190px;
-      padding: 0px;
-      .card-content
-        padding: 0px;
-        .content
-          img
-            margin-right: 10px;
-    .footer-item
-      display: inline;
-      padding: 0px;
-      h1
-        margin-top: 5px;
-        font-size: 17px;
-        font-weight: 500;
-      h2
-        font-size: 13px;
-      span
-        font-size: 10px;
-        line-height: 1.2em;
-        display: block;
-        font-weight: 300;
-        margin: 5px 0px 10px 0px;
-      h3
-        font-size: 10px;
-  
-  @media screen and (min-width: 600px)
     .columns
-      .column
-        margin: 3vh 2vw;
-        max-width: 23vw;
-        max-height: 41vh;
-        padding: 0px;
-        .card-content
-          padding: 0px;
-          .content
-            img
-              margin-right: 10px;
-      .footer-item
-        display: inline-block;
-        padding: 0px;
-        margin-top: 5vh;
-        h1
-          margin-top: 5px;
-          font-size: 2.0rem;
-          font-weight: 500;
-        h2
-          font-size: 1.5rem;
-        span
-          font-size: 1.2rem;
-          line-height: 1.2em;
-          display: block;
-          font-weight: 300;
-          margin: 5px 0px 10px 0px;
-        h3
-          font-size: 1.0rem;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        .column
+            padding: 0 12px;
+            .card-content
+                padding: 0 1.5rem;
+                .content
+                    img
+            .footer-item
+                padding: 0 1.5rem;
+                h1
+                    font-size: 1.35rem;
+                    font-weight: 500;
+                h2
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    margin-bottom: 5px;
+                span
+                    display: block;
+                    font-size: 1.0rem;
+                    line-height: 1.2em;
+                h3
+                    margin-top: 5px;
+                    font-size: 0.9rem;
+                    font-weight: 300;
+    @media screen and (min-width: 600px)
+        .columns
+            .column
+                .card-content
+                    .content
+                        img
+                .footer-item
+                    h1
+                    h2
+                    span
+                    h3
+
 </style>

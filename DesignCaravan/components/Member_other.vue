@@ -1,16 +1,15 @@
 <template lang="pug">
   div.columns.is-centered.is-mobile
     div.column
+      div.card-content
+        div.content
+          img(:src="imgSrc", alt="")
+    div.column
       div.footer-item
         h1 {{ name }}
         h2 {{ role }}
         span {{ discription }}
         h3 担当：{{ charge }}
-    div.column
-      div.card-content
-        div.content
-          img(:src="imgSrc", alt="")
-
 
 </template>
 
@@ -54,7 +53,7 @@ export default {
         padding: 0px;
         .content
           img
-            margin-left: 10px;
+            margin-right: 10px;
     .footer-item
       display: inline;
       padding: 0px;
@@ -72,6 +71,7 @@ export default {
         margin: 5px 0px 10px 0px;
       h3
         font-size: 10px;
+  
   @media screen and (min-width: 600px)
     .columns
       .column
