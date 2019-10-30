@@ -24,47 +24,6 @@ export default {
   },
   data: function(){
     return{
-      works:{
-        stamp:{
-          img:{
-            thum: require('~/assets/works/stamp_1.jpg'),
-          },
-          skill: "",
-          subscription: "",
-          link: "/works/detail/stamp",
-        },
-        badge:{
-          img:{
-            thum: require('~/assets/works/badge_1.jpg'),
-          },
-          link: "/works/detail/badge",
-        },
-        socks:{
-          img:{
-            thum: require('~/assets/works/socks_1.jpg'),
-          },
-          link: "/works/detail/socks",
-        },
-        rainbow:{
-          img:{
-            thum: require('~/assets/works/rainbow_1.jpg')
-          },
-          link: "/works/detail/rainbow",
-        },
-        shell:{
-          img:{
-            thum: require('~/assets/works/shell_1.jpg'),
-          },
-          link: "/works/detail/shell",
-        },
-        deer:{
-          img:{
-            thum: require('~/assets/works/deer_1.jpg'),
-          },
-          link: "/works/detail/deer",
-        },
-        
-      },
     }
   },
   asyncData: async function({params}){

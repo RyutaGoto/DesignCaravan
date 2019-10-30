@@ -24,6 +24,11 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
+        div.hidden_box
+          label(for="label") クリックして表示
+          input#label(type="checkbox")
+          div.hidden_show
+            p やあ
     div#footer
 </template>
 
@@ -107,6 +112,28 @@ export default {
         .char
           margin-left: 10px;
           font-size: 1.0rem;
+      .hidden_box
+        margin: 2em 0;
+        padding: 0;
+        label
+          padding: 15px;
+          font-weight: bold;
+          border: solid 2px black;
+          cursor: pointer;
+        label:hover
+          background: #efefef;
+        input
+          display: none;
+        .hidden_show
+          height: 0;
+          padding: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: 0.8s;
+        input:checked ~ .hidden_show
+          padding: 10px 0;
+          height: auto;
+          opacity: 1;
        
       
 

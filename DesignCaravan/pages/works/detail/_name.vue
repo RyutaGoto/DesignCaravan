@@ -24,7 +24,6 @@
           a.all 作品一覧を見る
         div
           a.next つぎの作品へ
-      //p {{ $route.params.detail }}
     div#footer
 
 </template>
