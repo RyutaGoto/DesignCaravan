@@ -1,10 +1,15 @@
 <template lang="pug">
-  div
+  div    
     div#top
-      div.thumnail
+      div(v-if="$mq === 'sm'")
         Carousel(:perPage="1", :paginationEnabled="false", :autoplay="true", :loop="true",)
-          Slide(v-for="i in top")
+          Slide(v-for="i in top_mobile")
             img(:src="i")
+      div(v-else)
+        Carousel(:perPage="1", :paginationEnabled="false", :autoplay="true", :loop="true",)
+          Slide(v-for="i in top_pc")
+            img(:src="i")
+        
     div#body
       div.about
         Subtitle(jp="DesignCaravan とは", en="About")
@@ -52,38 +57,51 @@ export default {
   },
   data: function(){
     return{
-      top:[
-        require('~/assets/top/top_1.png'),
-        require('~/assets/top/top_2.png'),
-        require('~/assets/top/top_3.png'),
-        require('~/assets/top/top_4.png'),
-        require('~/assets/top/top_5.png'),
-        require('~/assets/top/top_6.png'),
-        require('~/assets/top/top_7.png'),
-        require('~/assets/top/top_8.png'),
-        require('~/assets/top/top_9.png'),
-        require('~/assets/top/top_10.png'),
-        require('~/assets/top/top_11.png'),
-        require('~/assets/top/top_12.png'),
-        require('~/assets/top/top_13.png'),
-        require('~/assets/top/top_14.png'),
-        require('~/assets/top/top_15.png'),
-        require('~/assets/top/top_16.png'),
-        require('~/assets/top/top_17.png'),
-        require('~/assets/top/top_18.png'),
-        require('~/assets/top/top_19.png'),
-        require('~/assets/top/top_20.png'),
-        require('~/assets/top/top_21.png'),
-        require('~/assets/top/top_22.png'),
-        require('~/assets/top/top_23.png'),
-        require('~/assets/top/top_24.png'),
-        //require('~/assets/top/top_25.png'),
-        //require('~/assets/top/top_26.png'),
-        //require('~/assets/top/top_27.png'),
-        //require('~/assets/top/top_28.png'),
-        //require('~/assets/top/top_29.png'),
-        //require('~/assets/top/top_30.png'),
-         
+      top_pc:[
+        require('~/assets/top/pc/01.png'),
+        require('~/assets/top/pc/02.png'),
+        require('~/assets/top/pc/03.png'),
+        require('~/assets/top/pc/04.png'),
+        require('~/assets/top/pc/05.png'),
+        require('~/assets/top/pc/06.png'),
+        require('~/assets/top/pc/07.png'),
+        require('~/assets/top/pc/08.png'),
+        require('~/assets/top/pc/09.png'),
+        require('~/assets/top/pc/10.png'),
+        require('~/assets/top/pc/11.png'),
+        require('~/assets/top/pc/12.png'),
+        require('~/assets/top/pc/13.png'),
+        require('~/assets/top/pc/14.png'),
+        require('~/assets/top/pc/15.png'),
+        require('~/assets/top/pc/16.png'),
+        require('~/assets/top/pc/17.png'),
+        require('~/assets/top/pc/18.png'),
+        require('~/assets/top/pc/19.png'),
+        require('~/assets/top/pc/20.png'),
+        require('~/assets/top/pc/21.png'),
+      ],
+      top_mobile:[
+        require('~/assets/top/mobile/01.png'),
+        require('~/assets/top/mobile/02.png'),
+        require('~/assets/top/mobile/03.png'),
+        require('~/assets/top/mobile/04.png'),
+        require('~/assets/top/mobile/05.png'),
+        require('~/assets/top/mobile/06.png'),
+        require('~/assets/top/mobile/07.png'),
+        require('~/assets/top/mobile/08.png'),
+        require('~/assets/top/mobile/09.png'),
+        require('~/assets/top/mobile/10.png'),
+        require('~/assets/top/mobile/11.png'),
+        require('~/assets/top/mobile/12.png'),
+        require('~/assets/top/mobile/13.png'),
+        require('~/assets/top/mobile/14.png'),
+        require('~/assets/top/mobile/15.png'),
+        require('~/assets/top/mobile/16.png'),
+        require('~/assets/top/mobile/17.png'),
+        require('~/assets/top/mobile/18.png'),
+        require('~/assets/top/mobile/19.png'),
+        require('~/assets/top/mobile/20.png'),
+        require('~/assets/top/mobile/21.png'),
       ],
     }
   },
@@ -143,72 +161,75 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-#top
-  height: 90vh;
-  width: 100vw;
-  margin-left: -20px;
-  //margin-right: -20px;
-  position: relative;
-  img
-    z-index: 0;
-    height: 100vh;
+div
+  #top
+    height: 90vh;
     width: 100vw;
-    object-fit: cover;
-    filter: contrast(60%);
-  #logo
-    z-index: 20;
-    width: 120px;
-    height: auto;
-    position: absolute;
-    left: 4vh;
-    //right: 0;
-    bottom: 9vh;
-    //margin: auto;
-    filter: brightness(130%);
-  span
-    z-index: 20;
-    position: absolute;
-    left: 5vh;
-    //right: 0;
-    bottom: 5vh;
-    //margin: auto;
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
+    margin-left: -20px;
+    position: relative;
+    img
+      z-index: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      filter: contrast(60%);
+    #logo
+      z-index: 20;
+      width: 120px;
+      height: auto;
+      position: absolute;
+      left: 4vh;
+      //right: 0;
+      bottom: 9vh;
+      //margin: auto;
+      filter: brightness(130%);
+    span
+      z-index: 20;
+      position: absolute;
+      left: 5vh;
+      //right: 0;
+      bottom: 5vh;
+      //margin: auto;
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
 
 
-#body
-  .discription
-    font-size: 11px;
-    text-align: center;
-    padding: 20px;
-  .link
-    width: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    .button
-      font-size: 12px;
-      font-weight: 500;
-      padding-right: 40px;
-      padding-left: 40px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      color: #eeeeee;
-      background-color: #606060;
-  .snapshots
-    .columns
-      margin: 0 auto;
+  #body
+    .discription
+      font-size: 11px;
+      text-align: center;
+      padding: 20px;
+    .link
+      width: auto;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      .button
+        font-size: 12px;
+        font-weight: 500;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #eeeeee;
+        background-color: #606060;
+    .snapshots
+      .columns
+        margin: 0 auto;
   
 @media screen and (min-width: 600px)
   div
     #top
       margin: 0;
-      
-      img
+    img
+      z-index: 0;
+      height: 100vh;
+      width: 100vw;
+      //object-fit: cover;
+      filter: contrast(60%);
+    #logo
         
-      #logo
-        
-      span
+    span
         
     #body
       .discription

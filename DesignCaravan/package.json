@@ -25,6 +25,7 @@
     "pug-html-loader": "^1.1.5",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.3.1",
+    "vue-mq": "^1.0.1",
     "vue-svg-loader": "^0.12.0"
   }
 }

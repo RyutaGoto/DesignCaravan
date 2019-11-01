@@ -24,7 +24,7 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
-        div.hidden_box
+        //div.hidden_box
           label(for="label") クリックして表示
           input#label(type="checkbox")
           div.hidden_show
