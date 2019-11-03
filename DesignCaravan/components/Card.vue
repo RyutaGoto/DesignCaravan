@@ -72,28 +72,29 @@ export default {
             line-height: 1.2em;
   
   @media screen and (min-width: 600px)
+    .column
       .box
         box-shadow: none;
         padding: 0em;
         position: relative;
-        width: 310px;
-        margin: 0;
+        width: 280px;
+        margin: 0 auto;
         .card-content
-          width: 310px;
-          height: 360px;
+          width: 280px;
+          height: 340px;
           position: relative;
           padding: 0px;
           .content
             img
-              width: 310px;
-              height: 360px;
+              width: 280px;
+              height: 340px;
               object-fit: cover;
               border-radius: 10px;
               box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
               margin: 0 auto;
               display: block;
         .card-footer
-          width: 310px;
+          width: 280px;
           height: 100px;
           position: absolute;
           bottom: 0;
@@ -109,10 +110,10 @@ export default {
             h1
               color: #2a2a2a;
               font-weight: 500;
-              font-size: 21px
+              font-size: 1.1rem
             span
               display: block;
               color: #5a5a5a;
-              font-size: 14px;
+              font-size: 0.8rem;
               line-height: 1.2em;
 </style>

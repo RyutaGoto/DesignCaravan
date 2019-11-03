@@ -59,7 +59,7 @@ export default {
       width: 100%
       height: 20vh;
       background-image: url("~assets/sub.png");
-      background-size: 10% auto;
+      background-size: 15% auto;
       background-repeat: no-repeat;
       background-position: center center; 
       line-height: 2.5em;
@@ -71,10 +71,10 @@ export default {
         position: absolute;
         top: 35%;
         h1
-          font-size: 2.4rem;
+          font-size: 2.0rem;
           font-weight: 400;
         h2
-          font-size: 2.0rem;
+          font-size: 1.5rem;
           font-weight: 300;
 
 </style>

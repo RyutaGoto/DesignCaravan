@@ -20,8 +20,12 @@
       div.works
         Subtitle(jp="作品たち", en="Works")        
         div.columns.is-centered.is-multiline.is-mobile
-          div.column.is-narrow(v-for="(i, index) in json_works",v-if="index < 3")
-            Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}          
+          div(v-if="$mq === 'sm'")
+            div.column.is-narrow(v-for="(i, index) in json_works",v-if="index < 3")
+              Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}          
+          div(v-else)
+            div.column.is-one-third(v-for="(i, index) in json_works",v-if="index < 6")
+              Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}
         div.link.buttons.is-centered
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
@@ -126,16 +130,7 @@ export default {
 
     var works_limit = 0;
     var snap_limit = 0;
-    /*
-    if (mq.matches) {
-      works_limit = 6;
-      snap_limit = 8;
-    }
-    else {
-      works_limit = 3;
-      snap_limit = 4;
-    }
-    */
+
     //worksオブジェクトのソート
     var j = res_works.data.length - 1;
     for (var i = 0; i < res_works.data.length; i++) {
@@ -232,12 +227,13 @@ div
     span
         
     #body
+      padding: 0 18vw;
       .discription
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
         display: block;
         margin: 0 auto;
-        width: 65vw;
+        width: 50vw;
         p
           text-align: center;
       .link
@@ -246,12 +242,13 @@ div
           font-size: 1.2rem;
           padding: 3vh 5vw;
       .works
+        padding: 0 7vw;
         .columns
           .column
-            width: 310px;
+            //width: 280px;
             display: inline-block;
             padding: 0;
-            margin: 3vh 1.5vw;
+            margin: 3vh 0;
       .snapshots
         margin-bottom: 20vh;
         .columns
