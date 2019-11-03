@@ -13,6 +13,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: "//code.typesquare.com/static/ZDbTe4IzCko%253D/ts106f.js" }
     ]
   },
   /*

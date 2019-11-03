@@ -1,5 +1,5 @@
 <template lang="pug">
-    div.columns.is-centered.is-desktop
+    div.columns.is-centered.is-vcentered.is-desktop
         div.column
             div.card-content
                 div.content
@@ -73,10 +73,17 @@ export default {
                 .card-content
                     .content
                         img
+                            height: 40vh;
                 .footer-item
                     h1
+                        font-family: 'ゴシックMB101 B';
+                        font-weight: 600;
+                        font-size: 1.8rem;
                     h2
+                        font-size: 1.0rem;
                     span
+                        font-size: 1.2rem;
+                        margin-top: 2vh;
                     h3
 
 </style>

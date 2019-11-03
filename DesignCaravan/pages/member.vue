@@ -52,15 +52,15 @@ export default {
         url: require('../assets/members/sudo.png'),
         name: "須藤翼",
         role: "おとうさん",
-        discript: "RHPでくるくるレインボーのデモ機や、中間発表用の動画を制作してきた。主に電子工作、映像担当のおとうさん。現在は3Dモデリングを用いた作品制作に注力しているモデリングおじさん。パパすごい",
+        discript: "RHPでくるくるレインボーのデモ機や、中間発表用の動画を制作してきた。主に電子工作、映像担当のおとうさん。現在は3Dモデリングを用いた作品制作に注力しているモデリングおじさん。パパすごい。",
         charge: "映像制作、電子工作、みんなのパパ、色々"
       },
       goto:{
         url: require('../assets/members/goto.png'),
         name: "後藤隆太",
         role: "留退力学の申し子",
-        discript: "無料版wordpressの見た目どうにかしなきゃいけなかったときはタグの中に直書きをするなど、手段は選ばない人間。最近イヤホン失くしたので見つけたら連絡ください。",
-        charge: "Web、ガンプラ、速水奏、色々"
+        discript: "某無料ホームページ制作ツールで作ったサイトの見た目をどうにかしなきゃいけなかったときはタグの中に直書きをするなど、手段は選ばない人間。先日、アニメ「THE IDOLM@STER」を視聴して一層アイマスが好きになった人。",
+        charge: "如月千早"
       },
       
     }
@@ -77,8 +77,8 @@ export default {
   @media screen and (min-width: 600px)
     #body
       //padding: 12vh auto 8vh auto;
-      padding-top: 12vh;
-      //padding-right: auto;
+      padding-top: 1vh;
+      padding-right: 20vw;
       padding-bottom: 10vh;
-      //padding-left: auto;
+      padding-left: 20vw;
 </style>
