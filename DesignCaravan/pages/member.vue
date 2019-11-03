@@ -77,8 +77,8 @@ export default {
   @media screen and (min-width: 600px)
     #body
       //padding: 12vh auto 8vh auto;
-      padding-top: 1vh;
-      padding-right: 20vw;
+      padding-top: 0;
+      padding-right: 25vw;
       padding-bottom: 10vh;
-      padding-left: 20vw;
+      padding-left: 25vw;
 </style>

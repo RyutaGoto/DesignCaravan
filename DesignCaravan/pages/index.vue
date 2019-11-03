@@ -215,7 +215,7 @@ div
 @media screen and (min-width: 600px)
   div
     #top
-      margin: 0;
+      
     img
       z-index: 0;
       height: 100vh;
@@ -227,25 +227,26 @@ div
     span
         
     #body
-      padding: 0 18vw;
-      .discription
-        font-size: 1.2rem;
-        font-weight: 400;
-        display: block;
-        margin: 0 auto;
-        width: 50vw;
-        p
-          text-align: center;
+      padding: 30vh 25vw 0 25vw;
       .link
-        margin-top: 5vh;
+        margin-top: 3vh;
         .button
+          font-size: 1.0rem;
+          padding: 2.5vh 4vw;
+      .about
+        margin-bottom: 20vh;
+        .discription
           font-size: 1.2rem;
-          padding: 3vh 5vw;
+          font-weight: 400;
+          display: block;
+          margin: 0 auto;
+          width: 40vw;
+          p
+            text-align: center;
       .works
-        padding: 0 7vw;
+        margin-bottom: 20vh;
         .columns
           .column
-            //width: 280px;
             display: inline-block;
             padding: 0;
             margin: 3vh 0;

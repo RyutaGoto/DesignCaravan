@@ -137,9 +137,9 @@ export default {
 
   @media screen and (min-width: 600px)
     #body
-      padding-top: 12vh;
+      padding-top: 0;
       padding-right: 25vw;
-      padding-bottom: 13vh;
+      padding-bottom: 10vh;
       padding-left: 25vw;
       .abstract
         h1

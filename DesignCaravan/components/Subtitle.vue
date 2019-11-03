@@ -54,7 +54,7 @@ export default {
       position: relative;
       margin-right: auto;
       margin-left: auto;
-      margin-top: 18vh;
+      margin-top: 5vh;
       margin-bottom: 2vh;
       width: 100%
       height: 20vh;
