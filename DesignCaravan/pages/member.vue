@@ -32,7 +32,7 @@ export default {
         name: "鈴木ほのか",
         role: "リーダー",
         discript: "頼れるリーダー。メンバーやスケジュールのマネジメントだけでなく、ものづくりやデザインに対する意識もすごい。結構マイペース。スマートフォンは使い捨て派。あとサメがすごく好き。たまに5歳児。",
-        charge: "グラフィック、写真、色々"
+        charge: "グラフィック、写真、プロダクト、色々"
       },
       hinobori:{
         url: require('../assets/members/hinobori.png'),

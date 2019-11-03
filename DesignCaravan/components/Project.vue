@@ -63,31 +63,37 @@ export default {
           display: block;
   @media screen and (min-width: 600px)
     .column
+      display: flex;
+      width: 100%;
       .card
-        height: 40vh;
+        width: 50%;
+        height: 30vh;
         .card-content
-          height: 100%;
           padding: 0px;
           .content
             img
-              width: 100%;
-              height: 40vh;
+              height: 30vh;
               object-fit: cover;
       .card-footer
+        width: 45%;
+        margin-left: 5%;
+        border: none;
         .card-footer-item
           display: inline;
           h1
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #555555;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #333;
           h2
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #666666;
+            font-size: 1.0rem;
+            font-weight: 200;
+            color: #777;
+            margin-bottom: 2vh;
             //padding-left: 1vw;
           span
-            font-size: 1.3rem;
+            font-size: 1.05rem;
             line-height: 1.2em;
             display: block;
+            color: #333;
             //padding-left: 1vw;
 </style>

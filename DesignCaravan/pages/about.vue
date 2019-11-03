@@ -102,8 +102,6 @@ export default {
         font-size: 0.75rem;
     .project
       padding: 20px;
-      //margin-bottom: 30px;
-      h1
       h1
         .num
           padding-right: 10px;
@@ -140,31 +138,56 @@ export default {
   @media screen and (min-width: 600px)
     #body
       padding-top: 12vh;
-      padding-right: auto;
+      padding-right: 25vw;
       padding-bottom: 13vh;
-      padding-left: auto;
+      padding-left: 25vw;
       .abstract
-        .num
-          font-size: 12pt;
-          border-right: solid 5px #707070
-          //&:after
-            content: '';
-            display: inline-block;
-            background: #BD0404;
-            height: 22px;
-            width: 4px;
-            margin-left: 6px;
+        h1
+          margin-bottom: 1vh;
+          .num
+            font-family: 'ゴシックMB101 B';
+            font-weight: bold;
+            padding-right: 10px;
+            font-size: 1.5rem;
+            border-right: solid 3px #707070
+          .char
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 1.3rem;
+        .thum
+          #map
+            margin: 3px 0;
+            width: 100%;
+            height: 43vh;
+            object-fit: cover;
+          #cycle
+            margin: 3px 0;
+            width: 100%;
+            height: 40vh;
+            object-fit: scale-down;
         .discription
-          font-size: 1.4rem;
+          font-size: 1.0rem;
           font-weight: 400;
           display: block;
           margin: 0 auto 17vh auto;
-          width: 65vw;
+          width: auto;
           p
-            text-align: center;
+            //text-align: center;
       .project
+        h1
+          margin-bottom: 1vh;
+          .num
+            font-family: 'ゴシックMB101 B';
+            font-weight: bold;
+            padding-right: 10px;
+            font-size: 1.5rem;
+            border-right: solid 3px #707070
+          .char
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 1.3rem;
         #item
           margin: 0 auto;
-          width: 60vw;
+          //width: 60vw;
           margin-bottom: 6vh;
 </style>
