@@ -51,20 +51,20 @@ export default {
   .column
     //padding: 5px;
     .card
-      width: 160px;
-      height: 150px;
+      width: 35vw;
+      height: 35vw;
       margin: 3px;
       box-shadow: 1px 2px 8px rgba(10, 10, 10, 0.3);
       .card-content
         padding: 7px;
         .content
-          width: 100%;
-          height: 100%;
+          width: 32vw;
+          height: 32vw;
           img
             max-width: 100%;
             //max-height: 100%;
-            width: 146px;
-            height: 136px;
+            width: 32vw;
+            height: 32vw;
             object-fit: cover;
     footer
       div

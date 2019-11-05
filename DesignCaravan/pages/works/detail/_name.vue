@@ -55,13 +55,6 @@ export default {
       json_data: result.data,
     };
   }
-  /*
-  asyncData({ params }){
-    return{
-      json_data: require('~/assets/json/data.json')
-    }
-  }
-  */
 }
 </script>
 
@@ -69,63 +62,55 @@ export default {
   #body
     padding-bottom: 100px;
     h1
-      font-weight: 400;
-      font-size: 20px;
+      font-family: 'ゴシックMB101 B';
+      font-weight: 600;
+      font-size: 1.3rem;
       margin-bottom: 10px;
       text-align: center;
     h2
-      font-size: 18px;
+      color: #555;
+      font-size: 1.2rem;
       margin-top: 10px;
+      font-weight: 600;
     .carousel
       margin-bottom: 20px;
       img
         width: 335px;
         height: 250px;
         object-fit: cover;
-    .term
-      p
-        font-weight: 300;
-        font-size: 15px;
-    .skill
-      p
-        font-weight: 300;
-        font-size: 15px;
-    .abstract
-      p
-        font-weight: 300;
-        font-size: 15px;
+    p
+      color: #555;
+      font-weight: 300;
+      font-size: 1.0rem;
   @media screen and (min-width: 600px)
     #body
-      padding-bottom: 20vh;
+      padding-top: 0;
+      padding-right: 25vw;
+      padding-bottom: 10vh;
+      padding-left: 25vw;
+      margin-bottom: 10vh;
       .works
-        width: 50vw;
+        width: 40vw;
         margin: 0 auto;
       h1
-        font-weight: 400;
-        font-size: 2.2rem;
-        margin-bottom: 10px;
+        font-family: 'ゴシックMB101 B';
+        font-weight: 600;
+        font-size: 1.9rem;
+        //margin-bottom: 3px;
         text-align: center;
+        color: #333;
       h2
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-top: 10px;
       .carousel
-        width: 50vw;
+        width: 40vw;
         display: block;
-        margin: 5vh auto;
+        margin: 1vh auto 3vh auto;
         img
           width: 100%;
-          height: 60vh;
+          height: 45vh;
           object-fit: cover;
-      .term
-        p
-          font-weight: 300;
-          font-size: 1.5rem;
-      .skill
-        p
-          font-weight: 300;
-          font-size: 1.5rem;
-      .abstract
-        p
-          font-weight: 300;
-          font-size: 1.5rem;
+      p
+        font-weight: 300;
+        font-size: 1.3rem;
 </style>
