@@ -7,7 +7,7 @@
     Modal(:val="postItem", v-if="showModal", @close="closeModal")
     footer
       div
-        h1.has-text-grey {{ title }}
+        h1 {{ title }}
         
 
 </template>
@@ -73,9 +73,10 @@ export default {
           font-size: 12px;
   @media screen and (min-width: 600px)
     .column
+      //width: 100%;
       .card
-        width: 350px;
-        height: 340px;
+        width: 11vw;
+        height: 10vw;
         margin: 3px;
         box-shadow: 1px 2px 8px rgba(10, 10, 10, 0.3);
         .card-content
@@ -94,6 +95,7 @@ export default {
         div
           h1
             margin-left: 8px;
-            font-size: 1.3rem;
+            font-size: 1.0rem;
+            color: #666;
 
 </style>
