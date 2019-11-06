@@ -132,9 +132,6 @@ export default {
       "data" : [],
     };
 
-    var works_limit = 0;
-    var snap_limit = 0;
-
     //worksオブジェクトのソート
     var j = res_works.data.length - 1;
     for (var i = 0; i < res_works.data.length; i++) {

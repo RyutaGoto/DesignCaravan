@@ -104,6 +104,7 @@ export default {
       height: 98vh;
       //position: relative;
       .navbar
+        background-color: #f5f5f5;
         display: flex;
         align-items: center;
         justify-content: center;

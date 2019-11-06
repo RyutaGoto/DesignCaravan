@@ -34,7 +34,7 @@ export default {
 
 <style lang="sass" scoped>
   .column
-    padding: 3px 0 40px 0;
+    padding: 0.1rem;
     .card
       height: 160px;
       .card-content
@@ -48,7 +48,7 @@ export default {
     .card-footer
       .card-footer-item
         display: inline;
-        padding: 12px 0;
+        padding: 12px 0 2px 0;
         h1
           font-size: 0.9rem;
           font-weight: 600;

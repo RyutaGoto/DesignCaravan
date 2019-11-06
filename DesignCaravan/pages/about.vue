@@ -24,17 +24,20 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
-        //div.hidden_box
-          label(for="label") クリックして表示
-          input#label(type="checkbox")
-          div.hidden_show
-            p やあ
+          div.hidden_box(v-if="i.works")
+            label(for="label") 作品を見る
+            input#label(type="checkbox")
+            div.hidden_show
+              div.columns.is-centered.is-multiline.is-mobile
+                div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
+                  Card(:title="j.name", :imgSrc="j.item[0]", :link="j.link") {{ j.abstract }}
     div#footer
 </template>
 
 <script>
 import Project from '~/components/Project'
 import Subtitle from '~/components/Subtitle'
+import Card from '~/components/Card'
 
 const axios = require('axios');
 
@@ -44,6 +47,7 @@ export default {
   components: {
     Project,
     Subtitle,
+    Card
   },
 
   data: function(){
@@ -53,21 +57,36 @@ export default {
   },
   asyncData: async function({params}){
     let about = "https://designcaravan-60b57.firebaseio.com/about.json";
+    let works = "https://designcaravan-60b57.firebaseio.com/works.json";
+    
     let res_about = await axios.get(about);
+    let res_works = await axios.get(works);
 
     var sort_about = {
       "data" : [],
     };
 
-    //worksオブジェクトのソート
+    var sort_works = {
+      "data" : [],
+    };
+
+    //aboutオブジェクトのソート
     var j = res_about.data.length - 1;
     for (var i = 0; i < res_about.data.length; i++) {
       sort_about.data[j] = res_about.data[i];
       j = j - 1;
     }
+
+    //worksオブジェクトのソート
+    var j = res_works.data.length - 1;
+    for (var i = 0; i < res_works.data.length; i++) {
+      sort_works.data[j] = res_works.data[i];
+      j = j - 1;
+    }
     
     return {
       json_about: sort_about.data,
+      json_works: sort_works.data,
     };
   },
 }
@@ -102,6 +121,8 @@ export default {
         font-size: 0.75rem;
     .project
       padding: 20px;
+      #item
+        padding-bottom: 80px;
       h1
         .num
           padding-right: 10px;
@@ -111,15 +132,17 @@ export default {
           margin-left: 10px;
           font-size: 1.0rem;
       .hidden_box
-        margin: 2em 0;
+        margin: 0.2em auto;
         padding: 0;
+        text-align: center;
         label
+          font-size: 0.8rem;
+          color: #4e4e4e;
           padding: 15px;
-          font-weight: bold;
-          border: solid 2px black;
           cursor: pointer;
         label:hover
-          background: #efefef;
+          //background: #efefef;
+          //opacity: 0.2;
         input
           display: none;
         .hidden_show
@@ -190,4 +213,5 @@ export default {
           margin: 0 auto;
           //width: 60vw;
           margin-bottom: 6vh;
+        
 </style>
