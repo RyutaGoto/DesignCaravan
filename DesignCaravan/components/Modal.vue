@@ -4,10 +4,10 @@
             div.modal-mask(@click="$emit('close')")
                 div.modal-wrapper
                     div.modal-container
-                      img(:src="val.img")
+                      img(:src="val.item")
                     div.text-wrapper
-                      h1 {{ val.title }}
-                      h2 {{ val.date }}
+                      h1 {{ val.name }}
+                      h2 {{ val.period }}
 </template>
 
 <script>
@@ -73,20 +73,21 @@
       display: table-cell;
       vertical-align: middle;
       .text-wrapper
-        width: 50vw;
+        width: 35vw;
         margin: 0 auto;
         h1
           margin: 10px auto 0 auto;
           font-size: 2.0rem;
+          font-weight: 600;
           color: #fff;
         h2
           margin: 0;
           font-size: 1.5rem;
-          color: #eee;
+          color: #eaeaea;
 
     .modal-container
-      width: 50vw;
-      height: 80vh;
+      width: 35vw;
+      height: 65vh;
       margin: 0px auto;
       padding: 15px 15px;
       background-color: #fff;

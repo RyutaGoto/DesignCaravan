@@ -31,8 +31,12 @@
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
         div.columns.is-multiline.is-mobile.is-centered
-          div.column.is-half(v-for="(i, index) in json_snap", v-if="index < 4")
-            Snapshots.is-narrow(:title="i.name", :imgSrc="i.item", :obj="i")
+          div(v-if="$mq === 'sm'")
+            div.column(v-for="(i, index) in json_snap", v-if="index < 4")
+              Snapshots.is-half(:title="i.name", :imgSrc="i.item", :obj="i")
+          div(v-else)
+            div.column(v-for="(i, index) in json_snap", v-if="index < 8")
+              Snapshots.is-one-quarter(:title="i.name", :imgSrc="i.item", :obj="i")
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
@@ -211,6 +215,13 @@ div
     .snapshots
       .columns
         margin: 0 auto;
+        width: 80vw;
+        .column
+            display: inline-block;
+            height: auto;
+            margin: 0 auto;
+            padding-right: 2px;
+            padding-left: 2px;
   
 @media screen and (min-width: 600px)
   div
@@ -256,7 +267,6 @@ div
           width: 55vw;
           .column
             display: inline-block;
-            width: 40%;
             height: auto;
             margin: 0 auto;
 

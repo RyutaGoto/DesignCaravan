@@ -53,8 +53,9 @@ export default {
             .footer-item
                 padding: 0 1.5rem;
                 h1
+                    font-family: 'ゴシックMB101 B';
                     font-size: 1.35rem;
-                    font-weight: 500;
+                    font-weight: 600;
                 h2
                     font-size: 0.9rem;
                     font-weight: 300;

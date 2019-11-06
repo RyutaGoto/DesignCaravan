@@ -81,9 +81,10 @@ export default {
         .card-footer-item
           display: inline;
           h1
+            font-family: 'ゴシックMB101 B';
             font-size: 1.6rem;
-            font-weight: 500;
-            color: #333;
+            //font-weight: 600;
+            color: #444;
           h2
             font-size: 1.0rem;
             font-weight: 200;
