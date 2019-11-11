@@ -61,9 +61,9 @@ export default {
   @media screen and (min-width: 600px)
     #body
       padding-top: 0;
-      padding-right: 24vw;
+      padding-right: 23vw;
       padding-bottom: 10vh;
-      padding-left: 24vw;
+      padding-left: 23vw;
       margin-bottom: 10vh;
       Subtitle
       .works

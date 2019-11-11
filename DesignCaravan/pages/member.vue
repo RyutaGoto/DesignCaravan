@@ -78,7 +78,7 @@ export default {
     #body
       //padding: 12vh auto 8vh auto;
       padding-top: 0;
-      padding-right: 25vw;
+      padding-right: 23vw;
       padding-bottom: 10vh;
-      padding-left: 25vw;
+      padding-left: 23vw;
 </style>

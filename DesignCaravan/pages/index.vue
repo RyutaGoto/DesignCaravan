@@ -230,7 +230,7 @@ div
     span
         
     #body
-      padding: 30vh 24vw 0 24vw;
+      padding: 30vh 23vw 0 23vw;
       .link
         margin-top: 3vh;
         .button

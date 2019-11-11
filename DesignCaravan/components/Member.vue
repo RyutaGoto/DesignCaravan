@@ -74,17 +74,18 @@ export default {
                 .card-content
                     .content
                         img
-                            height: 40vh;
+                            height: 43vh;
                 .footer-item
                     h1
                         font-family: 'ゴシックMB101 B';
                         font-weight: 600;
-                        font-size: 1.8rem;
+                        font-size: 1.7rem;
                     h2
-                        font-size: 1.0rem;
+                        font-size: 0.9rem;
                     span
-                        font-size: 1.2rem;
+                        font-size: 1.0rem;
                         margin-top: 2vh;
                     h3
+                        font-size: 0.8rem;
 
 </style>

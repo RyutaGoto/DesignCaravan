@@ -61,12 +61,12 @@ export default {
   @media screen and (min-width: 600px)
     #body
       padding-top: 0;
-      padding-right: 25vw;
+      padding-right: 23vw;
       padding-bottom: 10vh;
-      padding-left: 25vw;
+      padding-left: 23vw;
       margin-bottom: 10vh;
       .columns
-        width: 50vw;
+        width: 55vw;
         margin: 0 auto;
         .column
           display: inline-block;

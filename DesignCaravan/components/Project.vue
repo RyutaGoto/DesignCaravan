@@ -67,12 +67,12 @@ export default {
       width: 100%;
       .card
         width: 50%;
-        height: 30vh;
+        height: 32vh;
         .card-content
           padding: 0px;
           .content
             img
-              height: 30vh;
+              height: 32vh;
               object-fit: cover;
       .card-footer
         width: 45%;
@@ -82,18 +82,18 @@ export default {
           display: inline;
           h1
             font-family: 'ゴシックMB101 B';
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             //font-weight: 600;
             color: #444;
           h2
-            font-size: 1.0rem;
+            font-size: 0.9rem;
             font-weight: 200;
             color: #777;
             margin-bottom: 2vh;
             //padding-left: 1vw;
           span
-            font-size: 1.05rem;
-            line-height: 1.2em;
+            font-size: 1rem;
+            line-height: 1.1em;
             display: block;
             color: #333;
             //padding-left: 1vw;

@@ -24,16 +24,9 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
-          div.columns.is-centered.is-multiline.is-mobile(v-if="i.works")
+          //div.columns.is-centered.is-multiline.is-mobile(v-if="i.works")
             div.column.is-half(v-for="j in json_works")
               Card(:imgSrc="j.item[0]", :link="j.link")
-          //div(@click="active")
-            span(v-if="isActive") もどす
-            span(v-else) 作品を表示する
-          //div(v-if="isActive")
-            div.columns.is-centered.is-multiline.is-mobile
-              div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
-                Card(:title="j.name", :imgSrc="j.item[0]", :link="j.link") {{ j.abstract }}
     div#footer
 </template>
 
@@ -172,9 +165,9 @@ export default {
   @media screen and (min-width: 600px)
     #body
       padding-top: 0;
-      padding-right: 25vw;
+      padding-right: 23vw;
       padding-bottom: 10vh;
-      padding-left: 25vw;
+      padding-left: 23vw;
       .abstract
         h1
           margin-bottom: 1vh;
@@ -183,7 +176,7 @@ export default {
             font-weight: bold;
             padding-right: 10px;
             font-size: 1.5rem;
-            border-right: solid 3px #707070
+            border-right: solid 3px #707070;
           .char
             font-weight: bold;
             margin-left: 10px;
