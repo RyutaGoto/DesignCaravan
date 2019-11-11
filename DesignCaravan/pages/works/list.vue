@@ -2,9 +2,14 @@
   div
     div#body
       Subtitle(jp="作品たち", en="Works")
-      div.works.columns.is-centered.is-multiline.is-mobile
-        div.column.is-narrow(v-for="i in json_data")
-          Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}        
+      div.works
+        div.columns.is-centered.is-multiline.is-mobile
+          div(v-if="$mq === 'sm'")
+            div.column.is-narrow(v-for="i in json_works")
+              Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}          
+          div(v-else)
+            div.column.is-one-third(v-for="i in json_works")
+              Card(:title="i.name", :imgSrc="i.item[0]", :link="i.link") {{ i.abstract }}
     div#footer
 
 </template>
@@ -34,6 +39,7 @@ export default {
       "data" : [],
     };
 
+    //worksオブジェクトのソート
     var j = res_works.data.length - 1;
     for (var i = 0; i < res_works.data.length; i++) {
       sort_works.data[j] = res_works.data[i];
@@ -41,7 +47,7 @@ export default {
     }
 
     return {
-      json_data: sort_works.data,
+      json_works: sort_works.data,
     };
   }
 }
@@ -55,12 +61,17 @@ export default {
   @media screen and (min-width: 600px)
     #body
       padding-top: 0;
-      padding-right: 25vw;
+      padding-right: 24vw;
       padding-bottom: 10vh;
-      padding-left: 25vw;
+      padding-left: 24vw;
       margin-bottom: 10vh;
       Subtitle
       .works
-        width: 50vw;
+        //width: 50vw;
         margin: 0 auto;
+        .columns
+          .column
+            display: inline-block;
+            padding: 0;
+            margin: 3vh 0;
 </style>

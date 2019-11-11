@@ -95,7 +95,7 @@ export default {
         div
           h1
             margin-left: 8px;
-            font-size: 1.0rem;
+            font-size: 0.9rem;
             color: #666;
 
 </style>

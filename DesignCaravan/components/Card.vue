@@ -77,25 +77,26 @@ export default {
         box-shadow: none;
         padding: 0em;
         position: relative;
-        width: 280px;
+        width: 17vw;
+        height: 40vh;
         margin: 0 auto;
         .card-content
-          width: 280px;
-          height: 340px;
+          width: 17vw;
+          height: 40vh;
           position: relative;
           padding: 0px;
           .content
             img
-              width: 280px;
-              height: 340px;
+              width: 17vw;
+              height: 40vh;
               object-fit: cover;
               border-radius: 10px;
               box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
               margin: 0 auto;
               display: block;
         .card-footer
-          width: 280px;
-          height: 100px;
+          width: 17vw;
+          height: 16vh;
           position: absolute;
           bottom: 0;
           right: auto;
@@ -108,9 +109,10 @@ export default {
           .card-footer-item
             display: block;
             h1
-              color: #2a2a2a;
+              color: #444;
               font-weight: 500;
-              font-size: 1.1rem
+              font-size: 1rem;
+              font-weight: bold;
             span
               display: block;
               color: #5a5a5a;

@@ -114,11 +114,6 @@ export default {
     }
   },
   asyncData: async function({params}){
-    /*
-    if (process.browser) {
-      const mq = window.matchMedia( "(min-width: 600px)" );
-    }
-    */
     let works = "https://designcaravan-60b57.firebaseio.com/works.json";
     let snap = "https://designcaravan-60b57.firebaseio.com/snapshots.json";
     
@@ -235,7 +230,7 @@ div
     span
         
     #body
-      padding: 30vh 25vw 0 25vw;
+      padding: 30vh 24vw 0 24vw;
       .link
         margin-top: 3vh;
         .button
@@ -265,7 +260,7 @@ div
           .column
             display: inline-block;
             height: auto;
-            margin: 0 auto;
+            margin: 1vh 1.5vh;
 
 
 </style>
