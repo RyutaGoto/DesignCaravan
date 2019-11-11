@@ -24,13 +24,16 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
-          div.hidden_box(v-if="i.works")
-            label(for="label") 作品を見る
-            input#label(type="checkbox")
-            div.hidden_show
-              div.columns.is-centered.is-multiline.is-mobile
-                div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
-                  Card(:title="j.name", :imgSrc="j.item[0]", :link="j.link") {{ j.abstract }}
+          div.columns.is-centered.is-multiline.is-mobile(v-if="i.works")
+            div.column.is-half(v-for="j in json_works")
+              Card(:imgSrc="j.item[0]", :link="j.link")
+          //div(@click="active")
+            span(v-if="isActive") もどす
+            span(v-else) 作品を表示する
+          //div(v-if="isActive")
+            div.columns.is-centered.is-multiline.is-mobile
+              div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
+                Card(:title="j.name", :imgSrc="j.item[0]", :link="j.link") {{ j.abstract }}
     div#footer
 </template>
 
@@ -52,9 +55,17 @@ export default {
 
   data: function(){
     return{
-      data: []  
+      data: [],
+      isActive: false
     }
   },
+
+  methods: {
+    active: function(){
+      this.isActive = !this.isActive
+    }
+  },
+
   asyncData: async function({params}){
     let about = "https://designcaravan-60b57.firebaseio.com/about.json";
     let works = "https://designcaravan-60b57.firebaseio.com/works.json";
