@@ -52,15 +52,16 @@ export default {
         h1
           font-size: 0.9rem;
           font-weight: 600;
-          color: #555555;
+          color: #555;
         h2
           font-size: 0.8rem;
           font-weight: 400;
-          color: #666666;
+          color: #888;
         span
           font-size: 0.8rem;
           line-height: 1.2em;
           display: block;
+          color: #777;
   @media screen and (min-width: 600px)
     .column
       display: flex;
