@@ -58,7 +58,7 @@ export default {
 <style lang="sass" scoped>
   @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
   #app
-    font-family: 'Noto Sans Japanese', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     .navbar
       height: 70px;
       box-shadow: 0 2px 5px #cccccc;

@@ -24,16 +24,22 @@
           span.char 進行プロジェクト
         div#item(v-for="i in json_about")
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
-          //div.columns.is-centered.is-multiline.is-mobile(v-if="i.works")
-            div.column.is-half(v-for="j in json_works")
-              Card(:imgSrc="j.item[0]", :link="j.link")
+          div(v-if="i.works")
+            h2 つくったもの
+            div.columns.is-multiline.is-mobile.is-centered
+              div(v-if="$mq === 'sm'")
+                div.column(v-for="j in json_works", v-if="i.project === j.project")
+                  Card_about.is-half(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
+              div(v-else)
+                div.column(v-for="j in json_works", v-if="i.project === j.project")
+                  Card_about.is-one-third(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
     div#footer
 </template>
 
 <script>
 import Project from '~/components/Project'
 import Subtitle from '~/components/Subtitle'
-import Card from '~/components/Card'
+import Card_about from '~/components/Card_about'
 
 const axios = require('axios');
 
@@ -43,7 +49,7 @@ export default {
   components: {
     Project,
     Subtitle,
-    Card
+    Card_about
   },
 
   data: function(){
@@ -125,8 +131,6 @@ export default {
         font-size: 0.75rem;
     .project
       padding: 20px;
-      #item
-        padding-bottom: 80px;
       h1
         .num
           padding-right: 10px;
@@ -135,30 +139,23 @@ export default {
         .char
           margin-left: 10px;
           font-size: 1.0rem;
-      .hidden_box
-        margin: 0.2em auto;
-        padding: 0;
-        text-align: center;
-        label
-          font-size: 0.8rem;
-          color: #4e4e4e;
-          padding: 15px;
-          cursor: pointer;
-        label:hover
-          //background: #efefef;
-          //opacity: 0.2;
-        input
-          display: none;
-        .hidden_show
-          height: 0;
-          padding: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: 0.8s;
-        input:checked ~ .hidden_show
-          padding: 10px 0;
-          height: auto;
-          opacity: 1;
+      #item
+        padding-bottom: 80px;
+        h2
+          font-size: 0.9rem;
+          text-align: center;
+          margin-top: 1vh;
+          margin-bottom: 2vh;
+          font-weight: bold;
+          font-family: "游ゴシック体", YuGothic;
+          color: #999;
+        .columns
+          width: 100%;
+          margin: 0 auto;
+          .column
+            display: inline-block;
+            margin: 0 auto;
+
        
       
 
@@ -217,5 +214,19 @@ export default {
           margin: 0 auto;
           //width: 60vw;
           margin-bottom: 6vh;
+          h2
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+            font-weight: bold;
+            font-family: "游ゴシック体", YuGothic;
+            color: #999;
+          .columns
+            width: 40vw;
+            margin: 0 auto;
+            .column
+              display: inline-block;
+              
         
 </style>
