@@ -51,8 +51,8 @@ export default {
   .column
     //padding: 5px;
     .card
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       margin: 3px;
       box-shadow: 1px 2px 8px rgba(10, 10, 10, 0.3);
       .card-content

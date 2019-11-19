@@ -28,10 +28,10 @@
             h2 つくったもの
             div.columns.is-multiline.is-mobile.is-centered(v-if="$mq === 'sm'")
               div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
-                Card_about.is-half(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
+                Card_about(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
             div.columns.is-multiline.is-mobile.is-centered(v-else)
               div.column.is-one-third(v-for="j in json_works", v-if="i.project === j.project")
-                Card_about.is-one-third(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
+                Card_about(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
     div#footer
 </template>
 
