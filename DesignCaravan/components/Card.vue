@@ -77,26 +77,27 @@ export default {
         box-shadow: none;
         padding: 0em;
         position: relative;
-        width: 17vw;
-        height: 40vh;
+        width: 240px;
+        height: 256px;
         margin: 0 auto;
         .card-content
-          width: 17vw;
-          height: 40vh;
+          width: 100%;
+          height: 100%;
           position: relative;
           padding: 0px;
           .content
+            height: 100%;
             img
-              width: 17vw;
-              height: 40vh;
+              width: 100%;
+              height: 100%;
               object-fit: cover;
               border-radius: 10px;
               box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
               margin: 0 auto;
               display: block;
         .card-footer
-          width: 17vw;
-          height: 16vh;
+          width: 100%;
+          height: 40%;
           position: absolute;
           bottom: 0;
           right: auto;

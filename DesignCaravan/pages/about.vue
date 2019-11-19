@@ -26,13 +26,12 @@
           Project(:title="i.name", :date="i.period", :imgSrc="i.item",) {{ i.abstract }}
           div(v-if="i.works")
             h2 つくったもの
-            div.columns.is-multiline.is-mobile.is-centered
-              div(v-if="$mq === 'sm'")
-                div.column(v-for="j in json_works", v-if="i.project === j.project")
-                  Card_about.is-half(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
-              div(v-else)
-                div.column(v-for="j in json_works", v-if="i.project === j.project")
-                  Card_about.is-one-third(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
+            div.columns.is-multiline.is-mobile.is-centered(v-if="$mq === 'sm'")
+              div.column.is-half(v-for="j in json_works", v-if="i.project === j.project")
+                Card_about.is-half(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
+            div.columns.is-multiline.is-mobile.is-centered(v-else)
+              div.column.is-one-third(v-for="j in json_works", v-if="i.project === j.project")
+                Card_about.is-one-third(:title="j.name", :imgSrc="j.item[0]", :link="j.link")
     div#footer
 </template>
 
@@ -105,6 +104,7 @@ export default {
 <style lang="sass" scoped>
   #body
     padding-bottom: 50px;
+    width: 337px;
     .abstract
       padding: 20px;
       margin-bottom: 50px;
@@ -165,6 +165,7 @@ export default {
       padding-right: 23vw;
       padding-bottom: 10vh;
       padding-left: 23vw;
+      width: auto
       .abstract
         h1
           margin-bottom: 1vh;

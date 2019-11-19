@@ -35,21 +35,24 @@ export default {
       box-shadow: none;
       padding: 0em;
       position: relative;
+      width: 125px;
+      height: 150px;
       .card-content
         padding: 0em;
         position: relative;
-        width: 33vw;
-        height: 23vh;
+        width: 100%;
+        height: 100%;
         .content
+          height: 100%;
           img
-            width: 33vw;
-            height: 23vh;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
       .card-footer
-        width: 33vw;
-        height: 7vh;
+        width: 100%;
+        height: 30%;
         position: absolute;
         bottom: 0;
         background-color: rgba(255, 255, 255, 0.7);

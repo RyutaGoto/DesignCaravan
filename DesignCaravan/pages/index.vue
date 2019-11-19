@@ -30,13 +30,12 @@
           nuxt-link.button(to="/works/list") Worksページへ→
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
-        div.columns.is-multiline.is-mobile.is-centered
-          div(v-if="$mq === 'sm'")
-            div.column(v-for="(i, index) in json_snap", v-if="index < 4")
-              Snapshots.is-half(:title="i.name", :imgSrc="i.item", :obj="i")
-          div(v-else)
-            div.column(v-for="(i, index) in json_snap", v-if="index < 8")
-              Snapshots.is-one-quarter(:title="i.name", :imgSrc="i.item", :obj="i")
+        div.columns.is-multiline.is-mobile.is-centered(v-if="$mq === 'sm'")
+          div.column(v-for="(i, index) in json_snap", v-if="index < 4")
+            Snapshots.is-half(:title="i.name", :imgSrc="i.item", :obj="i")
+        div.columns.is-multiline.is-mobile.is-centered(v-else)
+          div.column(v-for="(i, index) in json_snap", v-if="index < 8")
+            Snapshots.is-one-quarter(:title="i.name", :imgSrc="i.item", :obj="i")
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
@@ -239,7 +238,7 @@ div
       .about
         margin-bottom: 20vh;
         .discription
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-weight: 400;
           display: block;
           margin: 0 auto;
