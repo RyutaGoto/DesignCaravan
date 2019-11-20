@@ -54,6 +54,13 @@ const axios = require('axios');
 
 export default {
   name: 'HomePage',
+
+  head() {
+     return {
+       title: 'Top'
+     }
+   },
+
   components: {
     Card,
     Snapshots,
@@ -62,6 +69,7 @@ export default {
     Slide,
     SvgElement
   },
+
   data: function(){
     return{
       top_pc:[
@@ -112,6 +120,7 @@ export default {
       ],
     }
   },
+  
   asyncData: async function({params}){
     let works = "https://designcaravan-60b57.firebaseio.com/works.json";
     let snap = "https://designcaravan-60b57.firebaseio.com/snapshots.json";

@@ -20,6 +20,12 @@ import Member from '~/components/Member'
 export default {
   name: 'MemberPage',
 
+  head() {
+     return {
+       title: 'Member'
+     }
+   },
+   
   components: {
     Card,
     Subtitle,

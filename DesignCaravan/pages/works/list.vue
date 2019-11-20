@@ -23,14 +23,22 @@ const axios = require('axios');
 export default {
   name: 'ListPage',
 
+  head() {
+     return {
+       title: 'Works'
+     }
+   },
+
   components: {
     Card,
     Subtitle,
   },
+
   data: function(){
     return{
     }
   },
+
   asyncData: async function({params}){
     let works = "https://designcaravan-60b57.firebaseio.com/works.json";
     let res_works = await axios.get(works);

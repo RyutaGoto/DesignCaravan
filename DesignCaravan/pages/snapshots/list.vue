@@ -18,13 +18,22 @@ const axios = require('axios');
 
 export default {
   name: 'SnapshotsPage',
+
+  head() {
+     return {
+       title: 'Snapshots'
+     }
+   },
+
   components: {
     Card,
     Snapshots,
     Subtitle
   },
+
   data: function(){
   },
+
   asyncData: async function({params}){
     let snap = "https://designcaravan-60b57.firebaseio.com/snapshots.json";
     let res_snap = await axios.get(snap);

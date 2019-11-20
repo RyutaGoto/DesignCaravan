@@ -44,6 +44,12 @@ const axios = require('axios');
 
 export default {
   name: 'AboutPage',
+  
+  head() {
+     return {
+       title: 'About'
+     }
+   },
 
   components: {
     Project,

@@ -39,12 +39,19 @@ const axios = require('axios');
 export default {
   name: 'WorksPage',
 
+  head() {
+     return {
+       title: 'Works'
+     }
+   },
+
   components: {
     Card,
     Subtitle,
     Carousel,
     Slide
   },
+
   data: function(){
     
   },
