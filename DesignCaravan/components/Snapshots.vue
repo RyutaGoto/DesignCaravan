@@ -75,7 +75,7 @@ export default {
     .column
       //width: 100%;
       .card
-        width: 150px;
+        width: 140px;
         height: 140px;
         margin: 3px;
         box-shadow: 1px 2px 8px rgba(10, 10, 10, 0.3);

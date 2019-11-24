@@ -27,7 +27,7 @@ export default {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 10px;
     width: 100%
     height: 80px;

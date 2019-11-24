@@ -16,7 +16,7 @@
     "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
-    "firebase-tools": "^7.3.2",
+    "firebase-tools": "^7.8.1",
     "node-sass": "^4.13.0",
     "nuxt": "^2.10.2",
     "nuxt-mq": "^2.0.1",

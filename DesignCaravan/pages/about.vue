@@ -60,13 +60,6 @@ export default {
   data: function(){
     return{
       data: [],
-      isActive: false
-    }
-  },
-
-  methods: {
-    active: function(){
-      this.isActive = !this.isActive
     }
   },
 

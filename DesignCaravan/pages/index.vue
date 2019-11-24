@@ -31,11 +31,11 @@
       div.snapshots
         Subtitle(jp="旅のきろく", en="Snapshots") 
         div.columns.is-multiline.is-mobile.is-centered(v-if="$mq === 'sm'")
-          div.column.is-half(v-for="(i, index) in json_snap", v-if="index < 4")
-            Snapshots(:title="i.name", :imgSrc="i.item", :obj="i")
+          div.column(v-for="(i, index) in json_snap", v-if="index < 4")
+            Snapshots.is-half(:title="i.name", :imgSrc="i.item", :obj="i")
         div.columns.is-multiline.is-mobile.is-centered(v-else)
-          div.column.is-one-quarter(v-for="(i, index) in json_snap", v-if="index < 8")
-            Snapshots(:title="i.name", :imgSrc="i.item", :obj="i")
+          div.column(v-for="(i, index) in json_snap", v-if="index < 8")
+            Snapshots.is-one-quarter(:title="i.name", :imgSrc="i.item", :obj="i")
         div.link.buttons.is-centered
            nuxt-link.button(to="/snapshots/list") Snapshotsページへ→
     div#footer
@@ -162,7 +162,7 @@ export default {
 <style lang="sass" scoped>
 div
   #top
-    height: 90vh;
+    height: auto;
     width: 100vw;
     margin-left: -20px;
     position: relative;
@@ -202,7 +202,7 @@ div
     .link
       width: auto;
       margin-top: 20px;
-      margin-bottom: 50px;
+      padding-bottom: 50px;
       .button
         font-size: 12px;
         font-weight: 500;
@@ -215,13 +215,12 @@ div
     .snapshots
       .columns
         margin: 0 auto;
-        width: 80vw;
+        width: 90vw;
         .column
-            display: inline-block;
-            height: auto;
-            margin: 0 auto;
-            padding-right: 2px;
-            padding-left: 2px;
+          display: inline-block;
+          width: 40%;
+          height: auto;
+          margin: 0 auto;
   
 @media screen and (min-width: 600px)
   div
@@ -265,10 +264,15 @@ div
         margin-bottom: 20vh;
         .columns
           width: 55vw;
+          margin: 0 auto;
           .column
             display: inline-block;
-            height: auto;
-            margin: 1vh 1.5vh;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+            //display: inline-block;
+            //height: auto;
+            //margin: 1vh 1.5vh;
 
 
 </style>
