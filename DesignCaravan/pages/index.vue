@@ -224,20 +224,21 @@ div
   
 @media screen and (min-width: 600px)
   div
-    #top
-      
-    img
-      z-index: 0;
-      height: 100vh;
-      width: 100vw;
-      //object-fit: cover;
-      filter: contrast(60%);
-    #logo
-        
-    span
+    #top  
+      img
+        z-index: 0;
+        height: 100vh;
+        width: 100vw;
+        //object-fit: cover;
+        filter: contrast(60%);
+      #logo
+          
+      span
         
     #body
-      padding: 30vh 23vw 0 23vw;
+      //padding: 30vh 23vw 0 23vw;
+      width: 800px;
+      margin: 0 auto;
       .link
         margin-top: 3vh;
         .button
@@ -263,7 +264,7 @@ div
       .snapshots
         margin-bottom: 20vh;
         .columns
-          width: 55vw;
+          width: 100%;
           margin: 0 auto;
           .column
             display: inline-block;

@@ -102,12 +102,12 @@ export default {
       h1
         font-family: 'ゴシックMB101 B';
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         //margin-bottom: 3px;
         text-align: center;
-        color: #333;
+        color: #444;
       h2
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-top: 10px;
       .carousel
         width: 40vw;
@@ -119,5 +119,5 @@ export default {
           object-fit: cover;
       p
         font-weight: 300;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
 </style>

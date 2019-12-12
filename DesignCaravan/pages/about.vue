@@ -160,11 +160,13 @@ export default {
 
   @media screen and (min-width: 600px)
     #body
-      padding-top: 0;
-      padding-right: 23vw;
-      padding-bottom: 10vh;
-      padding-left: 23vw;
-      width: auto
+      //padding-top: 0;
+      //padding-right: 23vw;
+      //padding-bottom: 10vh;
+      //padding-left: 23vw;
+      //width: auto
+      width: 800px;
+      margin: 0 auto;
       .abstract
         h1
           margin-bottom: 1vh;

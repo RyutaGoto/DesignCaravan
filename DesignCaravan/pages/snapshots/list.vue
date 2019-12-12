@@ -2,9 +2,9 @@
   div
     div#body
       Subtitle(jp="旅のきろく", en="Snapshots")
-      div.columns.is-centered.is-multiline.is-mobile
-        div.column(v-for="item in json_data")
-          Snapshots.is-one-quarter(:title="item.name", :imgSrc="item.item", :obj="item")
+      div.columns.is-multiline.is-mobile.is-desktop
+        div.column.is-4(v-for="item in json_data")
+          Snapshots(:title="item.name", :imgSrc="item.item", :obj="item")
     div#footer
 
 </template>
@@ -63,25 +63,26 @@ export default {
         margin: 0 auto;
         .column
           display: inline-block;
-          width: 40%;
+          width: 50%;
           height: auto;
           margin: 0 auto;
   
   @media screen and (min-width: 600px)
     #body
-      padding-top: 0;
-      padding-right: 23vw;
-      padding-bottom: 10vh;
-      padding-left: 23vw;
-      margin-bottom: 10vh;
+      //padding-top: 0;
+      //padding-right: 23vw;
+      padding-bottom: 20vh;
+      //padding-left: 23vw;
+      //margin-bottom: 10vh;
+      width: 800px;
+      margin: 0 auto;
       .columns
-        width: 55vw;
+        width: 85%;
         margin: 0 auto;
         .column
           display: inline-block;
-          width: 100%;
-          //height: 25%;
-          margin: 0 auto;
+          width: auto;
+          margin: 0;
           padding: 10px;
 
 </style>

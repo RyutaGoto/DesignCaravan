@@ -70,20 +70,30 @@ export default {
                     font-weight: 300;
     @media screen and (min-width: 600px)
         .columns
+            margin-bottom: 70px;
+            margin-right: 50px;
             .column
                 .card-content
+                    width: 80%;
+                    margin: 0 0 0 auto;
+                    padding-right: 0;
                     .content
+                        text-align: center;
                         img
-                            height: 43vh;
+                            height: auto;
+                            width: 100%;
+                            //margin: 0 auto;
                 .footer-item
+                    padding: 0 0 0 1.5rem;
                     h1
                         font-family: 'ゴシックMB101 B';
                         font-weight: 600;
-                        font-size: 1.7rem;
+                        font-size: 1.5rem;
+                        letter-spacing: 0.05em;
                     h2
-                        font-size: 0.9rem;
+                        font-size: 0.8rem;
                     span
-                        font-size: 1.0rem;
+                        font-size: 0.9rem;
                         margin-top: 2vh;
                     h3
                         font-size: 0.8rem;

@@ -1,15 +1,15 @@
 <template lang="pug">
   div
     div#body
+      Subtitle(jp="キャラバンメンバー", en="Member")
       div.member-main
-        Subtitle(jp="キャラバンメンバー", en="Member")
         Member(:imgSrc="suzuki.url", :name="suzuki.name", :role="suzuki.role", :discription="suzuki.discript", :charge="suzuki.charge")
         Member(:imgSrc="hinobori.url", :name="hinobori.name", :role="hinobori.role", :discription="hinobori.discript", :charge="hinobori.charge")
         Member(:imgSrc="iwaki.url", :name="iwaki.name", :role="iwaki.role", :discription=" iwaki.discript", :charge="iwaki.charge")
         Member(:imgSrc="sudo.url", :name="sudo.name", :role="sudo.role", :discription="sudo.discript", :charge="sudo.charge")
         Member(:imgSrc="goto.url", :name="goto.name", :role="goto.role", :discription="goto.discript", :charge="goto.charge")
+      Subtitle(jp="ゆかいな仲間たち", en="Friends")
       div.member-friends
-        Subtitle(jp="ゆかいな仲間たち", en="Friends")
         div.text
           p 私達の活動の中で行動を共にしたり、サポートをしてくださる方々です。いつもありがとうございますのお気持ちですわ、はい。
         div.columns.is-.is-multiline.is-mobile.is-centered(v-if="$mq === 'sm'")
@@ -122,14 +122,13 @@ export default {
 
   @media screen and (min-width: 600px)
     #body
-      //padding: 12vh auto 8vh auto;
-      padding-top: 0;
-      padding-right: 23vw;
-      padding-bottom: 10vh;
-      padding-left: 23vw;
+      padding-bottom: 15vh;
+      width: 800px;
+      margin: 0 auto;
+      .member-main
+        width: 100%;
       .member-friends
-        margin-bottom: 50px;
-        
+        margin-bottom: 50px;  
         .text
           width: 600px;
           margin: 0 auto;
